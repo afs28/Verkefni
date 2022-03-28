@@ -1,4 +1,4 @@
-package main.java.hi.verkefni.vidmot;
+package hi.verkefni.vidmot;
 
 import java.util.Date;
 

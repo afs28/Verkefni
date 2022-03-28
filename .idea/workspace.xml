@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Verkefni.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Verkefni.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Controller.java" afterDir="false" />
@@ -14,17 +14,18 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Hotels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Hotels.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/PaymentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/flightsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/DayTrips.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Flights.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Hotels.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Payment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/PaymentTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/flightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/flightsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/DayTrips.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/Flights.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/Hotels.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/Payment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/flightsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/sample.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +50,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/openjdk-17.0.2/Contents/Home/lib/src.zip!/java.base/java/lang/NullPointerException.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -72,16 +76,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JUnit.flightsTest">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.flightsTest (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.hi.verkefni.vidmot.Main" />
+      <option name="MAIN_CLASS_NAME" value="hi.verkefni.vidmot.Main" />
       <module name="Verkefni" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\javafx\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../../JavaFX/javafx-sdk-18/lib --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hi.verkefni.vidmot.*" />
@@ -107,16 +116,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="flightsTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Verkefni" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hi.verkefni.vidmot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="PACKAGE_NAME" value="hi.verkefni.vidmot" />
-      <option name="MAIN_CLASS_NAME" value="hi.verkefni.vidmot.PaymentTest" />
+      <option name="MAIN_CLASS_NAME" value="hi.verkefni.vidmot.flightsTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,7 +135,9 @@
       </extension>
       <option name="PACKAGE_NAME" value="main.java.hi.verkefni.vidmot" />
       <option name="MAIN_CLASS_NAME" value="main.java.hi.verkefni.vidmot.flightsTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../../JavaFX/javafx-sdk-18/lib --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,18 +160,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.PaymentTest" />
       <item itemvalue="JUnit.PaymentTest (1)" />
       <item itemvalue="JUnit.flightsTest" />
       <item itemvalue="JUnit.flightsTest.testThisFlight" />
+      <item itemvalue="JUnit.flightsTest (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.flightsTest (1)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.flightsTest" />
         <item itemvalue="JUnit.flightsTest.testThisFlight" />
         <item itemvalue="JUnit.PaymentTest (1)" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.PaymentTest" />
       </list>
     </recent_temporary>
   </component>
