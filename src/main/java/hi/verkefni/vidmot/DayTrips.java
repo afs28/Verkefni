@@ -1,4 +1,4 @@
-package hi.verkefni.vidmot;
+package main.java.hi.verkefni.vidmot;
 
 import java.util.Date;
 
@@ -12,6 +12,10 @@ public class DayTrips {
     private Date dayTripDeparture;
     private Date dayTripArrival;
     private Integer dayTripDuration;
+
+    /* TODO
+    Þarf að hreinsa til í constructornum, taka hluti út og setja það sem við á í controllers.
+    */
 
     //constructor
     public DayTrips(String bookDayTrip, String filterDayTrips, String chooseDayTrips, Integer dayTripsPrice, String changeDayTrip, Date dayTripDeparture, Date dayTripArrival, Integer dayTripDuration) {

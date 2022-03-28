@@ -1,4 +1,4 @@
-package hi.verkefni.vidmot;
+package main.java.hi.verkefni.vidmot;
 
 public class Payment {
     //variables

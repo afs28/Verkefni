@@ -1,4 +1,4 @@
-package hi.verkefni.vidmot;
+package main.java.hi.verkefni.vidmot;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
