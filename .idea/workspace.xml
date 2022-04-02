@@ -5,27 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Verkefni.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Verkefni.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/DayTrips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/DayTrips.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Flights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Flights.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Hotels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Hotels.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/flightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/flightsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/DayTrips.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/Flights.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/Hotels.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/Payment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/flightsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/hi/verkefni/vidmot/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/DayTrips.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/DayTrips.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Flights.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Flights.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Hotels.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Hotels.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Payment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/flightsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/flightsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +45,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/openjdk-17.0.2/Contents/Home/lib/src.zip!/java.base/java/lang/NullPointerException.java" root0="SKIP_INSPECTION" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -62,6 +54,9 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="26yjnEU3MnQGphQ1u4WktJzJfWZ" />
   <component name="ProjectLevelVcsManager">
@@ -76,7 +71,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HotelProject/Hotel" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -86,15 +82,15 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.flightsTest (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hi.verkefni.vidmot.Main" />
       <module name="Verkefni" />
-      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../../JavaFX/javafx-sdk-18/lib --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\javafx\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hi.verkefni.vidmot.*" />
-          <option name="ENABLED" value="true" />
+          <option name="ENABLED" value="false" />
         </pattern>
       </extension>
       <method v="2">
@@ -167,8 +163,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.flightsTest (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.flightsTest (1)" />
         <item itemvalue="JUnit.flightsTest" />
         <item itemvalue="JUnit.flightsTest.testThisFlight" />
         <item itemvalue="JUnit.PaymentTest (1)" />
@@ -189,11 +185,41 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="61b674ba-b83d-4ad3-8059-08e36f9d70c1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/addzh/OneDrive/Desktop/Þróun Hugbúnaðar/Verkefni/target" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="61b674ba-b83d-4ad3-8059-08e36f9d70c1" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
