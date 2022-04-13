@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="Made some drafts of things">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Verkefni.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Verkefni.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/DayTrips.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/DayTrips.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Flights.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Flights.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Hotels.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Hotels.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Payment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/flightsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/flightsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +167,14 @@
       <option name="presentableId" value="Default" />
       <updated>1648402887030</updated>
     </task>
+    <task id="LOCAL-00001" summary="Made some drafts of things">
+      <created>1648915518344</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648915518345</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,5 +217,9 @@
         <entry key="61b674ba-b83d-4ad3-8059-08e36f9d70c1" value="TOOL_WINDOW" />
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Made some drafts of things" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some drafts of things" />
   </component>
 </project>

@@ -1,14 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="1077.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="1077.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
     <Tab text="My account">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <StackPane alignment="TOP_LEFT" layoutX="14.0" layoutY="50.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: pink;">
+                     <children>
+                        <Label prefHeight="25.0" text="Name:">
+                           <StackPane.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </StackPane.margin>
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0">
+                           <StackPane.margin>
+                              <Insets left="80.0" top="10.0" />
+                           </StackPane.margin>
+                        </TextField>
+                        <Label prefHeight="25.0" text="Email:">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="10.0" top="40.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0">
+                           <StackPane.margin>
+                              <Insets left="80.0" top="40.0" />
+                           </StackPane.margin>
+                        </TextField>
+                        <Label prefHeight="25.0" text="PhoneNo:">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="10.0" top="70.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0">
+                           <StackPane.margin>
+                              <Insets left="80.0" top="70.0" />
+                           </StackPane.margin>
+                        </TextField>
+                        <Label prefHeight="25.0" text="SSN:">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets left="10.0" top="100.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0">
+                           <StackPane.margin>
+                              <Insets left="80.0" top="100.0" />
+                           </StackPane.margin>
+                        </TextField>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="370.0" layoutY="50.0" prefHeight="140.0" prefWidth="350.0" style="-fx-background-color: pink;">
+                     <children>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                        </TextField>
+                        <Label contentDisplay="TOP" prefHeight="25.0" prefWidth="100.0" text="CARD DETAILS">
+                           <font>
+                              <Font name="Consolas" size="14.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets top="-80.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="14.0" layoutY="237.0" prefHeight="420.0" prefWidth="350.0" style="-fx-background-color: pink;">
+                     <children>
+                        <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" />
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="14.0" layoutY="193.0" prefHeight="44.0" prefWidth="350.0">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" text="CURRENT ORDERS">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="14.0" layoutY="6.0" prefHeight="44.0" prefWidth="350.0">
+                     <children>
+                        <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" text="ACCOUNT INFORMATION">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="370.0" layoutY="237.0" prefHeight="420.0" prefWidth="350.0" style="-fx-background-color: pink;">
+                     <children>
+                        <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" />
+                     </children>
+                  </StackPane>
+                  <Label alignment="CENTER" layoutX="370.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" text="ORDER HISTORY">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="370.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" text="CARD INFORMATION">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
       </content>
     </Tab>
     <Tab text="Flights">
