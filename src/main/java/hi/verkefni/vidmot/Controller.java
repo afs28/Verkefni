@@ -16,14 +16,14 @@ public class Controller implements Initializable {
     @FXML
     public ChoiceBox fxHotelsNoAdults;
     @FXML
-    public ChoiceBox fxHotelsNoChildren;
+    public ChoiceBox<String> fxHotelsNoChildren;
     @FXML
-    private ChoiceBox fxFlightsNoPassengers;
+    private ChoiceBox<String> fxFlightsNoPassengers;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //Setti inn virkni fyrir choicebox í Flights tab
-        setFXHotelChoiceBox();
+        setFXFlightsChoiceBox();
 
         //virkni fyrir choice box í Hotels tab
         setFXHotelChoiceBox();
