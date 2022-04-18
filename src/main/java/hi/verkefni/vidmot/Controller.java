@@ -3,6 +3,7 @@ package hi.verkefni.vidmot;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,6 +19,10 @@ public class Controller implements Initializable {
     @FXML
     public ChoiceBox<String> fxHotelsNoChildren;
     @FXML
+    public ComboBox fxDayTripsDuration;
+    @FXML
+    public ComboBox fxDayTripsArrivalTime;
+    @FXML
     private ChoiceBox<String> fxFlightsNoPassengers;
 
     @Override
@@ -27,6 +32,9 @@ public class Controller implements Initializable {
 
         //virkni fyrir choice box í Hotels tab
         setFXHotelChoiceBox();
+
+        //virkni fyrir combo box í DayTrips tab
+        setFXDayTripsChoiceBox();
     }
 
     //Kannski betra að geyma þetta í method()
@@ -54,6 +62,19 @@ public class Controller implements Initializable {
         fxOneWayRoundTrip.getItems().removeAll(fxOneWayRoundTrip.getItems());
         fxOneWayRoundTrip.getItems().addAll( "Round trip", "One way trip");
         fxOneWayRoundTrip.getSelectionModel().select("Round trip");
+    }
+
+    public void setFXDayTripsChoiceBox() {
+        //virkni fyrir combo box í Day Trips tab
+        fxDayTripsArrivalTime.getItems().removeAll(fxDayTripsArrivalTime.getItems());
+        fxDayTripsArrivalTime.getItems().addAll("08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00");
+        fxDayTripsArrivalTime.getSelectionModel().select("8:00");
+        fxDayTripsArrivalTime.setVisibleRowCount(5);
+
+        fxDayTripsDuration.getItems().removeAll(fxDayTripsDuration.getItems());
+        fxDayTripsDuration.getItems().addAll("<1:00","1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00", ">10:00");
+        fxDayTripsDuration.getSelectionModel().select("<1:00");
+        fxDayTripsDuration.setVisibleRowCount(5);
     }
 
 }
