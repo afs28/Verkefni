@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.verkefni.vidmot.Controller">
+   <content>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="1077.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="My account">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <StackPane alignment="TOP_LEFT" layoutX="14.0" layoutY="50.0" prefHeight="166.0" prefWidth="350.0" style="-fx-border-color: black;">
+                           <children>
+                              <Label prefHeight="25.0" text="Last name:">
+                                 <StackPane.margin>
+                                    <Insets left="10.0" />
+                                 </StackPane.margin>
+                                 <font>
+                                    <Font name="Consolas" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="125.0">
+                                 <StackPane.margin>
+                                    <Insets left="90.0" top="10.0" />
+                                 </StackPane.margin>
+                              </TextField>
+                              <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="125.0">
+                                 <StackPane.margin>
+                                    <Insets left="220.0" top="10.0" />
+                                 </StackPane.margin>
+                              </TextField>
+                              <Label prefHeight="25.0" text="Email:">
+                                 <font>
+                                    <Font name="Consolas" size="14.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="40.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0">
+                                 <StackPane.margin>
+                                    <Insets left="80.0" top="40.0" />
+                                 </StackPane.margin>
+                              </TextField>
+                              <Label prefHeight="25.0" text="PhoneNo:">
+                                 <font>
+                                    <Font name="Consolas" size="14.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="70.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0">
+                                 <StackPane.margin>
+                                    <Insets left="80.0" top="70.0" />
+                                 </StackPane.margin>
+                              </TextField>
+                              <Label prefHeight="25.0" text="SSN:">
+                                 <font>
+                                    <Font name="Consolas" size="14.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="100.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0">
+                                 <StackPane.margin>
+                                    <Insets left="80.0" top="100.0" />
+                                 </StackPane.margin>
+                              </TextField>
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="388.0" layoutY="50.0" prefHeight="166.0" prefWidth="350.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="200.0">
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                              </TextField>
+                              <Label contentDisplay="TOP" prefHeight="25.0" prefWidth="100.0" text="CARD DETAILS">
+                                 <font>
+                                    <Font name="Consolas" size="14.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets top="-80.0" />
+                                 </StackPane.margin>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="14.0" layoutY="260.0" prefHeight="420.0" prefWidth="350.0" style="-fx-border-color: black;">
+                           <children>
+                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" />
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="14.0" layoutY="215.0" prefHeight="44.0" prefWidth="350.0">
+                           <children>
+                              <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" text="CURRENT ORDERS">
+                                 <font>
+                                    <Font size="33.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets />
+                                 </StackPane.margin>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="14.0" layoutY="6.0" prefHeight="44.0" prefWidth="350.0">
+                           <children>
+                              <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" text="ACCOUNT INFORMATION">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="388.0" layoutY="260.0" prefHeight="420.0" prefWidth="350.0" style="-fx-border-color: black;">
+                           <children>
+                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" />
+                           </children>
+                        </StackPane>
+                        <Label alignment="CENTER" layoutX="388.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" text="ORDER HISTORY">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="388.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" text="CARD INFORMATION">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Flights">
+            <content>
+                  <ScrollPane>
+                     <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <StackPane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="1019.0" style="-fx-border-color: black;">
+                                 <children>
+                                    <ChoiceBox fx:id="fxFlightsNoPassengers" prefWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                       <StackPane.margin>
+                                          <Insets left="160.0" top="37.0" />
+                                       </StackPane.margin>
+                                    </ChoiceBox>
+                                    <ChoiceBox fx:id="fxOneWayRoundTrip" prefWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                       <StackPane.margin>
+                                          <Insets left="160.0" top="75.0" />
+                                       </StackPane.margin>
+                                    </ChoiceBox>
+                                    <Label text="No. of passengers: " StackPane.alignment="TOP_LEFT">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <StackPane.margin>
+                                          <Insets left="10.0" right="20.0" top="37.0" />
+                                       </StackPane.margin>
+                                    </Label>
+                                    <Label text="One way/round trip: " StackPane.alignment="TOP_LEFT">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <StackPane.margin>
+                                          <Insets left="10.0" right="20.0" top="75.0" />
+                                       </StackPane.margin>
+                                    </Label>
+                                    <Label text="From: " StackPane.alignment="TOP_LEFT">
+                                       <StackPane.margin>
+                                          <Insets left="350.0" right="20.0" top="37.0" />
+                                       </StackPane.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="To: " StackPane.alignment="TOP_LEFT">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <StackPane.margin>
+                                          <Insets left="600.0" right="20.0" top="37.0" />
+                                       </StackPane.margin>
+                                    </Label>
+                                    <ChoiceBox prefWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                       <StackPane.margin>
+                                          <Insets left="400.0" right="20.0" top="37.0" />
+                                       </StackPane.margin>
+                                    </ChoiceBox>
+                                    <ChoiceBox prefWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                       <StackPane.margin>
+                                          <Insets left="640.0" right="20.0" top="37.0" />
+                                       </StackPane.margin>
+                                    </ChoiceBox>
+                                    <DatePicker StackPane.alignment="TOP_LEFT">
+                                       <StackPane.margin>
+                                          <Insets left="470.0" right="20.0" top="75.0" />
+                                       </StackPane.margin>
+                                    </DatePicker>
+                                    <Label text="Departure date: " StackPane.alignment="TOP_LEFT">
+                                       <StackPane.margin>
+                                          <Insets left="350.0" right="20.0" top="75.0" />
+                                       </StackPane.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Arrival date: " StackPane.alignment="TOP_LEFT">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <StackPane.margin>
+                                          <Insets left="670.0" right="20.0" top="75.0" />
+                                       </StackPane.margin>
+                                    </Label>
+                                    <DatePicker StackPane.alignment="TOP_LEFT">
+                                       <StackPane.margin>
+                                          <Insets left="770.0" right="20.0" top="75.0" />
+                                       </StackPane.margin>
+                                    </DatePicker>
+                                    <Button fx:id="fxFlightsSearch" mnemonicParsing="false" text="Search" StackPane.alignment="TOP_LEFT">
+                                       <StackPane.margin>
+                                          <Insets left="950.0" top="110.0" />
+                                       </StackPane.margin>
+                                    </Button>
+                                 </children>
+                              </StackPane>
+                              <ScrollPane layoutX="14.0" layoutY="223.0">
+                                 <content>
+                                    <StackPane prefHeight="470.0" prefWidth="1019.0" style="-fx-border-color: black;">
+                                       <children>
+                                          <Label text="FlightID: " StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" top="10.0" />
+                                             </StackPane.margin>
+                                          </Label>
+                                          <Label text="FlightNo: " StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="210.0" top="10.0" />
+                                             </StackPane.margin>
+                                          </Label>
+                                          <Label text="From:  " StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="410.0" top="10.0" />
+                                             </StackPane.margin>
+                                          </Label>
+                                          <Label text="To: " StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="610.0" top="10.0" />
+                                             </StackPane.margin>
+                                          </Label>
+                                          <Label text="Price: " StackPane.alignment="TOP_LEFT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <StackPane.margin>
+                                                <Insets left="810.0" top="10.0" />
+                                             </StackPane.margin>
+                                          </Label>
+                                          <Separator prefHeight="9.0" prefWidth="1051.0" StackPane.alignment="TOP_CENTER">
+                                             <StackPane.margin>
+                                                <Insets top="50.0" />
+                                             </StackPane.margin>
+                                          </Separator>
+                                          <ListView maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="388.0" prefWidth="190.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="10.0" right="10.0" top="65.0" />
+                                             </StackPane.margin>
+                                          </ListView>
+                                          <ListView maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="388.0" prefWidth="190.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="210.0" top="65.0" />
+                                             </StackPane.margin>
+                                          </ListView>
+                                          <ListView maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="388.0" prefWidth="190.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="410.0" top="65.0" />
+                                             </StackPane.margin>
+                                          </ListView>
+                                          <ListView maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="388.0" prefWidth="190.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="610.0" top="65.0" />
+                                             </StackPane.margin>
+                                          </ListView>
+                                          <ListView maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="388.0" prefWidth="190.0" StackPane.alignment="TOP_LEFT">
+                                             <StackPane.margin>
+                                                <Insets left="810.0" top="65.0" />
+                                             </StackPane.margin>
+                                          </ListView>
+                                       </children>
+                                    </StackPane>
+                                 </content>
+                              </ScrollPane>
+                              <Label layoutX="50.0" layoutY="165.0" text="Available Flights: ">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+            </content>
+          </Tab>
+            <Tab text="Hotels">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <StackPane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="1050.0" style="-fx-border-color: black;">
+                           <children>
+                              <Label text="No. of Rooms: " StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Label text="No. of Adults: " StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="50.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Label text="No. of Children: " StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="90.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <ChoiceBox fx:id="fxHotelsNoRooms" prefWidth="50.0" StackPane.alignment="TOP_LEFT">
+                                 <StackPane.margin>
+                                    <Insets left="130.0" top="10.0" />
+                                 </StackPane.margin>
+                              </ChoiceBox>
+                              <ChoiceBox fx:id="fxHotelsNoAdults" prefWidth="50.0" StackPane.alignment="TOP_LEFT">
+                                 <StackPane.margin>
+                                    <Insets left="130.0" top="50.0" />
+                                 </StackPane.margin>
+                              </ChoiceBox>
+                              <ChoiceBox fx:id="fxHotelsNoChildren" prefWidth="50.0" StackPane.alignment="TOP_LEFT">
+                                 <StackPane.margin>
+                                    <Insets left="130.0" top="90.0" />
+                                 </StackPane.margin>
+                              </ChoiceBox>
+                              <Label text="Arrival Date: " StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="200.0" top="10.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <DatePicker StackPane.alignment="TOP_LEFT">
+                                 <StackPane.margin>
+                                    <Insets left="300.0" top="10.0" />
+                                 </StackPane.margin>
+                              </DatePicker>
+                              <Label text="Departure Date: " StackPane.alignment="TOP_LEFT">
+                                 <StackPane.margin>
+                                    <Insets left="500.0" top="10.0" />
+                                 </StackPane.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker StackPane.alignment="TOP_LEFT">
+                                 <StackPane.margin>
+                                    <Insets left="630.0" top="10.0" />
+                                 </StackPane.margin>
+                              </DatePicker>
+                              <Button fx:id="fxHotelsSearch" mnemonicParsing="false" text="Search" StackPane.alignment="TOP_LEFT">
+                                 <StackPane.margin>
+                                    <Insets left="980.0" top="110.0" />
+                                 </StackPane.margin>
+                              </Button>
+                              <Label text="Location: " StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="220.0" top="90.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <ChoiceBox prefWidth="150.0" StackPane.alignment="TOP_LEFT">
+                                 <StackPane.margin>
+                                    <Insets left="300.0" top="90.0" />
+                                 </StackPane.margin>
+                              </ChoiceBox>
+                           </children>
+                        </StackPane>
+                        <StackPane layoutX="14.0" layoutY="246.0" prefHeight="443.0" prefWidth="1049.0" style="-fx-border-color: black;">
+                           <children>
+                              <Label text="HotelNo:" StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Separator prefWidth="200.0" StackPane.alignment="TOP_CENTER">
+                                 <StackPane.margin>
+                                    <Insets top="50.0" />
+                                 </StackPane.margin>
+                              </Separator>
+                           </children>
+                        </StackPane>
+                        <Label layoutX="60.0" layoutY="175.0" text="Available Hotels: ">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Daytrips">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <StackPane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="1053.0" style="-fx-border-color: black;" />
+                        <StackPane layoutX="14.0" layoutY="255.0" prefHeight="443.0" prefWidth="1050.0" style="-fx-border-color: black;" />
+                        <Label layoutX="70.0" layoutY="185.0" text="Available Day Trips: ">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Order summary">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </content>
+</ScrollPane>
