@@ -34,7 +34,7 @@ public class Controller implements Initializable {
         setFXHotelChoiceBox();
 
         //virkni fyrir combo box í DayTrips tab
-        setFXDayTripsChoiceBox();
+       // setFXDayTripsChoiceBox();
     }
 
     //Kannski betra að geyma þetta í method()
