@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.verkefni.vidmot.Controller">
+<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1077.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -277,10 +277,13 @@
                                           <Insets left="770.0" right="20.0" top="75.0" />
                                        </StackPane.margin>
                                     </DatePicker>
-                                    <Button fx:id="fxFlightsSearch" mnemonicParsing="false" text="Search" StackPane.alignment="TOP_LEFT">
+                                    <Button fx:id="fxFlightsSearch" mnemonicParsing="false" text="Search" StackPane.alignment="TOP_RIGHT">
                                        <StackPane.margin>
-                                          <Insets left="950.0" top="110.0" />
+                                          <Insets right="20.0" top="100.0" />
                                        </StackPane.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
                                     </Button>
                                  </children>
                               </StackPane>
@@ -417,10 +420,13 @@
                                     <Insets left="630.0" top="10.0" />
                                  </StackPane.margin>
                               </DatePicker>
-                              <Button fx:id="fxHotelsSearch" mnemonicParsing="false" text="Search" StackPane.alignment="TOP_LEFT">
+                              <Button fx:id="fxHotelsSearch" mnemonicParsing="false" text="Search" StackPane.alignment="TOP_RIGHT">
                                  <StackPane.margin>
-                                    <Insets left="980.0" top="110.0" />
+                                    <Insets right="20.0" top="100.0" />
                                  </StackPane.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
                               </Button>
                               <Label text="Location: " StackPane.alignment="TOP_LEFT">
                                  <font>
@@ -502,30 +508,30 @@
                      <children>
                         <StackPane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="1044.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                            <children>
-                              <Label text="Duration: " StackPane.alignment="TOP_LEFT">
+                              <Label text="Activity: " StackPane.alignment="TOP_LEFT">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets left="50.0" top="50.0" />
+                                    <Insets left="108.0" top="50.0" />
                                  </StackPane.margin>
                               </Label>
-                              <Label text="Arrival time:" StackPane.alignment="TOP_LEFT">
+                              <Label text="Location: " StackPane.alignment="TOP_LEFT">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets left="50.0" top="100.0" />
+                                    <Insets left="100.0" top="100.0" />
                                  </StackPane.margin>
                               </Label>
                               <ComboBox fx:id="fxDayTripsDuration" prefWidth="100.0" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
-                                    <Insets left="150.0" top="50.0" />
+                                    <Insets left="200.0" top="50.0" />
                                  </StackPane.margin>
                               </ComboBox>
                               <ComboBox fx:id="fxDayTripsArrivalTime" prefWidth="100.0" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
-                                    <Insets left="150.0" top="100.0" />
+                                    <Insets left="200.0" top="100.0" />
                                  </StackPane.margin>
                               </ComboBox>
                               <Label text="Please fill out the search form: " StackPane.alignment="TOP_LEFT">
@@ -536,6 +542,40 @@
                                     <Insets left="10.0" top="10.0" />
                                  </StackPane.margin>
                               </Label>
+                              <Label text="Language: " StackPane.alignment="TOP_CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets right="130.0" top="50.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Label text="Date: " StackPane.alignment="TOP_CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets right="100.0" top="100.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <ComboBox prefWidth="100.0" StackPane.alignment="TOP_CENTER">
+                                 <StackPane.margin>
+                                    <Insets left="125.0" top="50.0" />
+                                 </StackPane.margin>
+                              </ComboBox>
+                              <DatePicker StackPane.alignment="TOP_CENTER">
+                                 <StackPane.margin>
+                                    <Insets left="200.0" top="100.0" />
+                                 </StackPane.margin>
+                              </DatePicker>
+                              <Button mnemonicParsing="false" text="Search" StackPane.alignment="TOP_RIGHT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets right="20.0" top="100.0" />
+                                 </StackPane.margin>
+                              </Button>
                            </children></StackPane>
                         <StackPane layoutX="14.0" layoutY="246.0" prefHeight="428.0" prefWidth="1044.0">
                            <children>
