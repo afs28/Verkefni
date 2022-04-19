@@ -179,7 +179,14 @@
                         </StackPane>
                         <StackPane layoutX="14.0" layoutY="260.0" prefHeight="420.0" prefWidth="350.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                            <children>
-                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" style="-fx-background-color: #f0ffff;" />
+                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" style="-fx-background-color: #f0ffff;">
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect></ListView>
                            </children>
                         </StackPane>
                         <StackPane layoutX="14.0" layoutY="215.0" prefHeight="44.0" prefWidth="350.0">
@@ -205,7 +212,14 @@
                         </StackPane>
                         <StackPane layoutX="388.0" layoutY="260.0" prefHeight="420.0" prefWidth="350.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                            <children>
-                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" style="-fx-background-color: #f0ffff;" />
+                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" style="-fx-background-color: #f0ffff;">
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect></ListView>
                            </children>
                         </StackPane>
                         <Label alignment="CENTER" layoutX="388.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" text="ORDER HISTORY">
@@ -225,7 +239,14 @@
                         </Label>
                         <StackPane layoutX="758.0" layoutY="50.0" prefHeight="166.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                            <children>
-                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="139.0" prefWidth="273.0" style="-fx-background-color: #f0ffff;" />
+                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="139.0" prefWidth="273.0" style="-fx-background-color: #f0ffff;">
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect></ListView>
                            </children>
                         </StackPane>
                         <Label alignment="CENTER" layoutX="758.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="300.0" text="YOUR REVIEWS">
@@ -235,7 +256,14 @@
                         </Label>
                         <StackPane layoutX="758.0" layoutY="259.0" prefHeight="420.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                            <children>
-                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="273.0" style="-fx-background-color: #f0ffff;" />
+                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="273.0" style="-fx-background-color: #f0ffff;">
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect></ListView>
                            </children>
                         </StackPane>
                         <Button layoutX="1000.0" layoutY="690.0" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #f0ffff;" text="Next">
