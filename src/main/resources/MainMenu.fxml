@@ -291,7 +291,7 @@
                                  <children>
                                     <ChoiceBox fx:id="fxFlightsNoPassengers" prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
-                                          <Insets left="160.0" top="37.0" />
+                                          <Insets left="160.0" top="50.0" />
                                        </StackPane.margin>
                                        <effect>
                                           <InnerShadow blurType="GAUSSIAN">
@@ -303,7 +303,7 @@
                                     </ChoiceBox>
                                     <ChoiceBox fx:id="fxOneWayRoundTrip" prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
-                                          <Insets left="160.0" top="75.0" />
+                                          <Insets left="160.0" top="100.0" />
                                        </StackPane.margin>
                                        <effect>
                                           <InnerShadow blurType="GAUSSIAN">
@@ -318,7 +318,7 @@
                                           <Font size="15.0" />
                                        </font>
                                        <StackPane.margin>
-                                          <Insets left="10.0" right="20.0" top="37.0" />
+                                          <Insets left="10.0" right="20.0" top="50.0" />
                                        </StackPane.margin>
                                     </Label>
                                     <Label text="One way/round trip: " StackPane.alignment="TOP_LEFT">
@@ -326,12 +326,12 @@
                                           <Font size="15.0" />
                                        </font>
                                        <StackPane.margin>
-                                          <Insets left="10.0" right="20.0" top="75.0" />
+                                          <Insets left="10.0" right="20.0" top="100.0" />
                                        </StackPane.margin>
                                     </Label>
                                     <Label text="From: " StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
-                                          <Insets left="350.0" right="20.0" top="37.0" />
+                                          <Insets left="350.0" right="20.0" top="50.0" />
                                        </StackPane.margin>
                                        <font>
                                           <Font size="15.0" />
@@ -342,12 +342,12 @@
                                           <Font size="15.0" />
                                        </font>
                                        <StackPane.margin>
-                                          <Insets left="600.0" right="20.0" top="37.0" />
+                                          <Insets left="600.0" right="20.0" top="50.0" />
                                        </StackPane.margin>
                                     </Label>
                                     <ChoiceBox prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
-                                          <Insets left="400.0" right="20.0" top="37.0" />
+                                          <Insets left="400.0" right="20.0" top="50.0" />
                                        </StackPane.margin>
                                        <effect>
                                           <InnerShadow blurType="GAUSSIAN">
@@ -359,7 +359,7 @@
                                     </ChoiceBox>
                                     <ChoiceBox prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
-                                          <Insets left="640.0" right="20.0" top="37.0" />
+                                          <Insets left="640.0" right="20.0" top="50.0" />
                                        </StackPane.margin>
                                        <effect>
                                           <InnerShadow blurType="GAUSSIAN">
@@ -371,7 +371,7 @@
                                     </ChoiceBox>
                                     <DatePicker style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
-                                          <Insets left="470.0" right="20.0" top="75.0" />
+                                          <Insets left="470.0" right="20.0" top="100.0" />
                                        </StackPane.margin>
                                        <effect>
                                           <InnerShadow blurType="GAUSSIAN">
@@ -383,7 +383,7 @@
                                     </DatePicker>
                                     <Label text="Departure date: " StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
-                                          <Insets left="350.0" right="20.0" top="75.0" />
+                                          <Insets left="350.0" right="20.0" top="100.0" />
                                        </StackPane.margin>
                                        <font>
                                           <Font size="15.0" />
@@ -394,12 +394,12 @@
                                           <Font size="15.0" />
                                        </font>
                                        <StackPane.margin>
-                                          <Insets left="670.0" right="20.0" top="75.0" />
+                                          <Insets left="670.0" right="20.0" top="100.0" />
                                        </StackPane.margin>
                                     </Label>
                                     <DatePicker style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
-                                          <Insets left="770.0" right="20.0" top="75.0" />
+                                          <Insets left="770.0" right="20.0" top="100.0" />
                                        </StackPane.margin>
                                        <effect>
                                           <InnerShadow blurType="GAUSSIAN">
@@ -424,6 +424,14 @@
                                           </InnerShadow>
                                        </effect>
                                     </Button>
+                                    <Label text="Please fill out the search form: " StackPane.alignment="TOP_LEFT">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <StackPane.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </StackPane.margin>
+                                    </Label>
                                  </children>
                                  <effect>
                                     <InnerShadow blurType="GAUSSIAN">
@@ -437,8 +445,13 @@
                                  <children>
                                     <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f0ffff;">
                                       <columns>
-                                        <TableColumn prefWidth="75.0" text="C1" />
-                                        <TableColumn prefWidth="75.0" text="C2" />
+                                        <TableColumn prefWidth="150.0" text="Flight number" />
+                                        <TableColumn prefWidth="150.0" text="Arrival" />
+                                          <TableColumn prefWidth="150.0" text="Departure" />
+                                          <TableColumn prefWidth="150.0" text="Date" />
+                                          <TableColumn prefWidth="150.0" text="Cost" />
+                                          <TableColumn prefWidth="150.0" text="Seats left" />
+                                          <TableColumn minWidth="0.0" prefWidth="150.0" text="Aircraft" />
                                       </columns>
                                        <effect>
                                           <InnerShadow blurType="GAUSSIAN">
@@ -522,23 +535,23 @@
                      <children>
                         <StackPane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="1044.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff; -fx-background-radius: 10;">
                            <children>
-                              <Label text="No. of Rooms: " StackPane.alignment="TOP_LEFT">
+                              <Label text="Length of stay:" StackPane.alignment="TOP_LEFT">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets left="10.0" top="10.0" />
+                                    <Insets left="260.0" top="50.0" />
                                  </StackPane.margin>
                               </Label>
-                              <Label text="No. of Adults: " StackPane.alignment="TOP_LEFT">
+                              <Label text="Capacity: " StackPane.alignment="TOP_LEFT">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets left="10.0" top="50.0" />
+                                    <Insets left="40.0" top="50.0" />
                                  </StackPane.margin>
                               </Label>
-                              <Label text="No. of Children: " StackPane.alignment="TOP_LEFT">
+                              <Label text="Type of room: " StackPane.alignment="TOP_LEFT">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
@@ -548,7 +561,7 @@
                               </Label>
                               <ChoiceBox fx:id="fxHotelsNoRooms" prefWidth="50.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
-                                    <Insets left="130.0" top="10.0" />
+                                    <Insets left="400.0" top="50.0" />
                                  </StackPane.margin>
                                  <effect>
                                     <InnerShadow blurType="GAUSSIAN">
@@ -570,7 +583,7 @@
                                     </InnerShadow>
                                  </effect>
                               </ChoiceBox>
-                              <ChoiceBox fx:id="fxHotelsNoChildren" prefWidth="50.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                              <ChoiceBox fx:id="fxHotelsNoChildren" prefWidth="100.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
                                     <Insets left="130.0" top="90.0" />
                                  </StackPane.margin>
@@ -587,32 +600,12 @@
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets left="200.0" top="10.0" />
+                                    <Insets left="500.0" top="50.0" />
                                  </StackPane.margin>
                               </Label>
                               <DatePicker style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
-                                    <Insets left="300.0" top="10.0" />
-                                 </StackPane.margin>
-                                 <effect>
-                                    <InnerShadow blurType="GAUSSIAN">
-                                       <color>
-                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
-                                       </color>
-                                    </InnerShadow>
-                                 </effect>
-                              </DatePicker>
-                              <Label text="Departure Date: " StackPane.alignment="TOP_LEFT">
-                                 <StackPane.margin>
-                                    <Insets left="500.0" top="10.0" />
-                                 </StackPane.margin>
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font>
-                              </Label>
-                              <DatePicker style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
-                                 <StackPane.margin>
-                                    <Insets left="630.0" top="10.0" />
+                                    <Insets left="600.0" top="50.0" />
                                  </StackPane.margin>
                                  <effect>
                                     <InnerShadow blurType="GAUSSIAN">
@@ -642,12 +635,12 @@
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets left="220.0" top="90.0" />
+                                    <Insets left="300.0" top="90.0" />
                                  </StackPane.margin>
                               </Label>
                               <ChoiceBox prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
-                                    <Insets left="300.0" top="90.0" />
+                                    <Insets left="400.0" top="90.0" />
                                  </StackPane.margin>
                                  <effect>
                                     <InnerShadow blurType="GAUSSIAN">
@@ -657,6 +650,14 @@
                                     </InnerShadow>
                                  </effect>
                               </ChoiceBox>
+                              <Label text="Please fill out the search form: " StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </Label>
                            </children>
                            <effect>
                               <InnerShadow blurType="GAUSSIAN">
@@ -691,30 +692,30 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <StackPane layoutX="736.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
+                        <StackPane layoutX="426.0" layoutY="168.0" prefHeight="71.0" prefWidth="633.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                            <children>
                               <CheckBox mnemonicParsing="false" text="Popularity" StackPane.alignment="BOTTOM_CENTER">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets bottom="10.0" left="15.0" />
+                                    <Insets bottom="10.0" left="15.0" right="130.0" />
                                  </StackPane.margin>
                               </CheckBox>
-                              <CheckBox mnemonicParsing="false" text="Rating" StackPane.alignment="BOTTOM_RIGHT">
+                              <CheckBox mnemonicParsing="false" text="Pool" StackPane.alignment="BOTTOM_RIGHT">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets bottom="10.0" right="20.0" />
+                                    <Insets bottom="10.0" right="240.0" />
                                  </StackPane.margin>
                               </CheckBox>
-                              <CheckBox mnemonicParsing="false" text="Price Range" StackPane.alignment="BOTTOM_LEFT">
+                              <CheckBox mnemonicParsing="false" text="Gym" StackPane.alignment="BOTTOM_LEFT">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets bottom="10.0" left="5.0" />
+                                    <Insets bottom="10.0" left="10.0" />
                                  </StackPane.margin>
                               </CheckBox>
                               <Label text="Filter by: " StackPane.alignment="TOP_LEFT">
@@ -725,6 +726,62 @@
                                     <Insets left="10.0" top="5.0" />
                                  </StackPane.margin>
                               </Label>
+                              <CheckBox mnemonicParsing="false" text="Pets allowed" StackPane.alignment="BOTTOM_CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets bottom="10.0" right="350.0" />
+                                 </StackPane.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Restaurant" StackPane.alignment="BOTTOM_CENTER">
+                                 <StackPane.margin>
+                                    <Insets bottom="10.0" left="300.0" />
+                                 </StackPane.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Wifi" StackPane.alignment="BOTTOM_RIGHT">
+                                 <StackPane.margin>
+                                    <Insets bottom="10.0" right="40.0" />
+                                 </StackPane.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Terrace" StackPane.alignment="TOP_CENTER">
+                                 <StackPane.margin>
+                                    <Insets right="130.0" top="10.0" />
+                                 </StackPane.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Breakfast" StackPane.alignment="TOP_CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets right="350.0" top="10.0" />
+                                 </StackPane.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Parking" StackPane.alignment="TOP_CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="420.0" top="10.0" />
+                                 </StackPane.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Smoking allowed" StackPane.alignment="TOP_CENTER">
+                                 <StackPane.margin>
+                                    <Insets left="150.0" top="10.0" />
+                                 </StackPane.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </CheckBox>
                            </children>
                            <effect>
                               <InnerShadow>
