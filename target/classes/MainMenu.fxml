@@ -9,7 +9,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -19,9 +18,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.verkefni.vidmot.Controller">
+<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.verkefni.vidmot.Controller">
    <content>
-      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="733.0" prefWidth="1077.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1077.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="My account">
             <content>
@@ -187,6 +186,7 @@
                               <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="273.0" />
                            </children>
                         </StackPane>
+                        <Button layoutX="1008.0" layoutY="688.0" mnemonicParsing="false" prefWidth="50.0" text="Next" />
                      </children>
                   </AnchorPane>
             </content>
@@ -195,9 +195,9 @@
             <content>
                   <ScrollPane>
                      <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="707.0" prefWidth="1076.0">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="731.0" prefWidth="1076.0">
                            <children>
-                              <StackPane layoutX="15.0" layoutY="14.0" prefHeight="150.0" prefWidth="1047.0" style="-fx-border-color: black;">
+                              <StackPane layoutX="15.0" layoutY="14.0" prefHeight="150.0" prefWidth="1047.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                                  <children>
                                     <ChoiceBox fx:id="fxFlightsNoPassengers" prefWidth="150.0" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
@@ -284,7 +284,7 @@
                                     </Button>
                                  </children>
                               </StackPane>
-                              <StackPane layoutX="16.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="430.0" prefWidth="1046.0" style="-fx-border-color: black;">
+                              <StackPane layoutX="16.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="430.0" prefWidth="1046.0">
                                  <children>
                                     <TableView prefHeight="200.0" prefWidth="200.0">
                                       <columns>
@@ -302,7 +302,7 @@
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
                               </Label>
-                              <StackPane layoutX="738.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black;">
+                              <StackPane layoutX="738.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                                  <children>
                                     <CheckBox mnemonicParsing="false" text="Popularity" StackPane.alignment="BOTTOM_CENTER">
                                        <font>
@@ -338,6 +338,8 @@
                                     </Label>
                                  </children>
                               </StackPane>
+                              <Button layoutX="16.0" layoutY="682.0" mnemonicParsing="false" prefWidth="50.0" text="Back" />
+                              <Button layoutX="1010.0" layoutY="682.0" mnemonicParsing="false" prefWidth="50.0" text="Next" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -348,7 +350,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <StackPane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="1050.0" style="-fx-border-color: black;">
+                        <StackPane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="1044.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                            <children>
                               <Label text="No. of Rooms: " StackPane.alignment="TOP_LEFT">
                                  <font>
@@ -435,21 +437,14 @@
                               </ChoiceBox>
                            </children>
                         </StackPane>
-                        <StackPane layoutX="14.0" layoutY="246.0" prefHeight="443.0" prefWidth="1049.0" style="-fx-border-color: black;">
+                        <StackPane layoutX="14.0" layoutY="246.0" prefHeight="428.0" prefWidth="1044.0">
                            <children>
-                              <Label text="HotelNo:" StackPane.alignment="TOP_LEFT">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                                 <StackPane.margin>
-                                    <Insets left="10.0" top="10.0" />
-                                 </StackPane.margin>
-                              </Label>
-                              <Separator prefWidth="200.0" StackPane.alignment="TOP_CENTER">
-                                 <StackPane.margin>
-                                    <Insets top="50.0" />
-                                 </StackPane.margin>
-                              </Separator>
+                              <TableView prefHeight="200.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                              </TableView>
                            </children>
                         </StackPane>
                         <Label layoutX="60.0" layoutY="175.0" text="Available Hotels: ">
@@ -460,7 +455,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <StackPane layoutX="739.0" layoutY="170.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black;">
+                        <StackPane layoutX="735.0" layoutY="170.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                            <children>
                               <CheckBox mnemonicParsing="false" text="Popularity" StackPane.alignment="BOTTOM_CENTER">
                                  <font>
@@ -496,6 +491,8 @@
                               </Label>
                            </children>
                         </StackPane>
+                        <Button layoutX="14.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" text="Back" />
+                        <Button layoutX="1008.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" text="Next" />
                      </children></AnchorPane>
               </content>
             </Tab>
@@ -503,7 +500,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <StackPane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="1000.0" style="-fx-border-color: black;">
+                        <StackPane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="1044.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                            <children>
                               <Label text="Duration: " StackPane.alignment="TOP_LEFT">
                                  <font>
@@ -540,9 +537,9 @@
                                  </StackPane.margin>
                               </Label>
                            </children></StackPane>
-                        <StackPane layoutX="14.0" layoutY="246.0" prefHeight="452.0" prefWidth="1000.0" style="-fx-border-color: black;">
+                        <StackPane layoutX="14.0" layoutY="246.0" prefHeight="428.0" prefWidth="1044.0">
                            <children>
-                              <TableView fx:id="fxTable" maxWidth="1000.0" prefHeight="450.0" prefWidth="1046.0">
+                              <TableView fx:id="fxTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="1044.0">
                                 <columns>
                                   <TableColumn fx:id="fxTitleColumn" prefWidth="100.0" text="Title" />
                                   <TableColumn fx:id="fxAvailableSeatsColumn" prefWidth="100.0" text="Available seats" />
@@ -565,6 +562,8 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
+                        <Button layoutX="14.0" layoutY="688.0" mnemonicParsing="false" prefWidth="50.0" text="Back" />
+                        <Button layoutX="1008.0" layoutY="688.0" mnemonicParsing="false" prefWidth="50.0" text="Next" />
                      </children></AnchorPane>
               </content>
             </Tab>
