@@ -6,22 +6,22 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<DialogPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root type="DialogPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="600.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="174.0" prefWidth="580.0">
                <children>
                   <Label prefWidth="70.0" text="Username:">
                      <HBox.margin>
-                        <Insets left="200.0" right="5.0" top="50.0" />
+                        <Insets left="170.0" right="5.0" top="140.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="fxUserId">
                      <HBox.margin>
-                        <Insets left="5.0" top="50.0" />
+                        <Insets left="5.0" top="140.0" />
                      </HBox.margin>
                   </TextField>
                </children>
@@ -30,10 +30,10 @@
                <children>
                   <Label prefWidth="70.0" text="Password:">
                      <HBox.margin>
-                        <Insets left="200.0" right="5.0" />
+                        <Insets left="170.0" right="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="fxPassword">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
@@ -44,6 +44,9 @@
       </VBox>
    </content>
    <header>
-      <Label alignment="CENTER" text="Welcome! Please sign in or create a new account." />
+      <Label alignment="CENTER" style="-fx-border-color: black; -fx-background-color: #dbffff;" text="Welcome! Please sign in or create a new account.">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
    </header>
-</DialogPane>
+</fx:root>

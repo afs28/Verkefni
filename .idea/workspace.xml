@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="Græjaði FULLT af hlutum í vinnslu, þarf að vinna úr og púsla saman">
+    <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="Byrjaði á login screeni">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/DayTrip/DayTripController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/flightsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/flightsTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650393581370</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Byrjaði á login screeni">
+      <created>1650398063645</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650398063645</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -313,6 +316,7 @@
     <MESSAGE value="More things and stuff, flights, hotels, daytrips" />
     <MESSAGE value="Adjusted some sizes" />
     <MESSAGE value="Græjaði FULLT af hlutum í vinnslu, þarf að vinna úr og púsla saman" />
-    <option name="LAST_COMMIT_MESSAGE" value="Græjaði FULLT af hlutum í vinnslu, þarf að vinna úr og púsla saman" />
+    <MESSAGE value="Byrjaði á login screeni" />
+    <option name="LAST_COMMIT_MESSAGE" value="Byrjaði á login screeni" />
   </component>
 </project>

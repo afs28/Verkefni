@@ -21,7 +21,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.verkefni.vidmot.Controller">
    <content>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1077.0" style="-fx-background-color: #f0ffff;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
