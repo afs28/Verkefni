@@ -21,7 +21,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1077.0" style="-fx-background-color: #f0ffff;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -179,7 +179,14 @@
                         </StackPane>
                         <StackPane layoutX="14.0" layoutY="260.0" prefHeight="420.0" prefWidth="350.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                            <children>
-                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" style="-fx-background-color: #f0ffff;" />
+                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" style="-fx-background-color: #f0ffff;">
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect></ListView>
                            </children>
                         </StackPane>
                         <StackPane layoutX="14.0" layoutY="215.0" prefHeight="44.0" prefWidth="350.0">
@@ -205,7 +212,14 @@
                         </StackPane>
                         <StackPane layoutX="388.0" layoutY="260.0" prefHeight="420.0" prefWidth="350.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                            <children>
-                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" style="-fx-background-color: #f0ffff;" />
+                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="327.0" style="-fx-background-color: #f0ffff;">
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect></ListView>
                            </children>
                         </StackPane>
                         <Label alignment="CENTER" layoutX="388.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="350.0" text="ORDER HISTORY">
@@ -225,7 +239,14 @@
                         </Label>
                         <StackPane layoutX="758.0" layoutY="50.0" prefHeight="166.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                            <children>
-                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="139.0" prefWidth="273.0" style="-fx-background-color: #f0ffff;" />
+                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="139.0" prefWidth="273.0" style="-fx-background-color: #f0ffff;">
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect></ListView>
                            </children>
                         </StackPane>
                         <Label alignment="CENTER" layoutX="758.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="300.0" text="YOUR REVIEWS">
@@ -235,7 +256,14 @@
                         </Label>
                         <StackPane layoutX="758.0" layoutY="259.0" prefHeight="420.0" prefWidth="300.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                            <children>
-                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="273.0" style="-fx-background-color: #f0ffff;" />
+                              <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="273.0" style="-fx-background-color: #f0ffff;">
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect></ListView>
                            </children>
                         </StackPane>
                         <Button layoutX="1000.0" layoutY="690.0" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #f0ffff;" text="Next">
@@ -430,7 +458,7 @@
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
                               </Label>
-                              <StackPane layoutX="736.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                              <StackPane layoutX="736.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                                  <children>
                                     <CheckBox mnemonicParsing="false" text="Popularity" StackPane.alignment="BOTTOM_CENTER">
                                        <font>
@@ -594,13 +622,20 @@
                                     </InnerShadow>
                                  </effect>
                               </DatePicker>
-                              <Button fx:id="fxHotelsSearch" mnemonicParsing="false" text="Search" StackPane.alignment="TOP_RIGHT">
+                              <Button fx:id="fxHotelsSearch" mnemonicParsing="false" style="-fx-background-color: #f0ffff;" text="Search" StackPane.alignment="TOP_RIGHT">
                                  <StackPane.margin>
                                     <Insets right="20.0" top="100.0" />
                                  </StackPane.margin>
                                  <font>
                                     <Font size="15.0" />
                                  </font>
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
                               </Button>
                               <Label text="Location: " StackPane.alignment="TOP_LEFT">
                                  <font>
@@ -656,7 +691,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <StackPane layoutX="736.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                        <StackPane layoutX="736.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
                            <children>
                               <CheckBox mnemonicParsing="false" text="Popularity" StackPane.alignment="BOTTOM_CENTER">
                                  <font>
@@ -691,6 +726,13 @@
                                  </StackPane.margin>
                               </Label>
                            </children>
+                           <effect>
+                              <InnerShadow>
+                                 <color>
+                                    <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
                         </StackPane>
                         <Button layoutX="14.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" style="-fx-background-color: #f0ffff;" text="Back">
                            <effect>
@@ -805,13 +847,20 @@
                                     </InnerShadow>
                                  </effect>
                               </DatePicker>
-                              <Button mnemonicParsing="false" text="Search" StackPane.alignment="TOP_RIGHT">
+                              <Button mnemonicParsing="false" style="-fx-background-color: #f0ffff;" text="Search" StackPane.alignment="TOP_RIGHT">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
                                     <Insets right="20.0" top="100.0" />
                                  </StackPane.margin>
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
                               </Button>
                            </children>
                            <effect>
@@ -875,6 +924,49 @@
                                  </color>
                               </InnerShadow>
                            </effect></Button>
+                        <StackPane layoutX="736.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff; -fx-background-radius: 10;">
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="Popularity" StackPane.alignment="BOTTOM_CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets bottom="10.0" left="15.0" />
+                                 </StackPane.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Rating" StackPane.alignment="BOTTOM_RIGHT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets bottom="10.0" right="20.0" />
+                                 </StackPane.margin>
+                              </CheckBox>
+                              <CheckBox mnemonicParsing="false" text="Price Range" StackPane.alignment="BOTTOM_LEFT">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets bottom="10.0" left="5.0" />
+                                 </StackPane.margin>
+                              </CheckBox>
+                              <Label text="Filter by: " StackPane.alignment="TOP_LEFT">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="10.0" top="5.0" />
+                                 </StackPane.margin>
+                              </Label>
+                           </children>
+                           <effect>
+                              <InnerShadow>
+                                 <color>
+                                    <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </StackPane>
                      </children></AnchorPane>
               </content>
             </Tab>

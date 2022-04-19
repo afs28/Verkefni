@@ -4,67 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="Adjusted some sizes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Controllers/BookingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Controllers/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Controllers/DayTripController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/BookingDataConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/Setup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Objects/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Objects/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Objects/DayTrip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Objects/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/ChangeBooking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/DayTripInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/GiveReview.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/UserLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/bookingView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/changeBookingView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/dayTripInfoView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/dayTripSearchView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/giveReviewView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/myTripsView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp/userLoginView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/BookingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/FlightController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/ReviewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Database/FlightDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Objects/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Objects/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Objects/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Objects/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Objects/Seat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/LoginView.fxml" afterDir="false" />
+    <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="Græjaði FULLT af hlutum í vinnslu, þarf að vinna úr og púsla saman">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/flightsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/FlightsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/BookingDataConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/CustomerDataConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/CustomerDataConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/DayTripDataConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/DayTripDataConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/ReviewDataConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/ReviewDataConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Setup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/dataBases.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/dataBases.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Objects/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Objects/Bill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/BillDB" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Database/BillDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Controllers/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Objects/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/HotelDB" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Database/HotelDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Hotelverkefni.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Database/Hotelverkefni.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Objects/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Objects/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Objects/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Objects/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/UserDB" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Database/UserDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/bFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Objects/bFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/creditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Objects/creditCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/intFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/HotelData/Objects/intFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/DayTrip/DayTripController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/flightsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/flightsTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +91,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hi.verkefni.vinnsla.DayTripData.temp.Main" />
+      <module name="Verkefni" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hi.verkefni.vinnsla.DayTripData.temp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hi.verkefni.vidmot.Main" />
       <module name="Verkefni" />
@@ -161,21 +122,6 @@
       <module name="Verkefni" />
       <option name="PACKAGE_NAME" value="hi.verkefni.vidmot" />
       <option name="MAIN_CLASS_NAME" value="hi.verkefni.vidmot.FlightsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PaymentTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Verkefni" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.java.hi.verkefni.vidmot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="main.java.hi.verkefni.vidmot" />
-      <option name="MAIN_CLASS_NAME" value="main.java.hi.verkefni.vidmot.PaymentTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -216,7 +162,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.PaymentTest (1)" />
+      <item itemvalue="Application.Main (1)" />
       <item itemvalue="JUnit.flightsTest" />
       <item itemvalue="JUnit.flightsTest.testThisFlight" />
       <item itemvalue="JUnit.FlightsTest" />
@@ -224,10 +170,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.FlightsTest" />
         <item itemvalue="JUnit.flightsTest" />
         <item itemvalue="JUnit.flightsTest.testThisFlight" />
-        <item itemvalue="JUnit.PaymentTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650373324628</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Græjaði FULLT af hlutum í vinnslu, þarf að vinna úr og púsla saman">
+      <created>1650393581370</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650393581370</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -359,6 +312,7 @@
     <MESSAGE value="Added new objects into my account, some spice" />
     <MESSAGE value="More things and stuff, flights, hotels, daytrips" />
     <MESSAGE value="Adjusted some sizes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted some sizes" />
+    <MESSAGE value="Græjaði FULLT af hlutum í vinnslu, þarf að vinna úr og púsla saman" />
+    <option name="LAST_COMMIT_MESSAGE" value="Græjaði FULLT af hlutum í vinnslu, þarf að vinna úr og púsla saman" />
   </component>
 </project>
