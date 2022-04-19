@@ -21,7 +21,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1077.0" style="-fx-background-color: #f0ffff;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -218,7 +218,7 @@
                               <Font size="33.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" layoutX="758.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="300.0" text="FAVORITES">
+                        <Label alignment="CENTER" layoutX="758.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="300.0" text="YOUR FAVORITES">
                            <font>
                               <Font size="33.0" />
                            </font>
@@ -228,7 +228,7 @@
                               <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="139.0" prefWidth="273.0" style="-fx-background-color: #f0ffff;" />
                            </children>
                         </StackPane>
-                        <Label alignment="CENTER" layoutX="758.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="300.0" text="REVIEWS">
+                        <Label alignment="CENTER" layoutX="758.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="300.0" text="YOUR REVIEWS">
                            <font>
                               <Font size="33.0" />
                            </font>

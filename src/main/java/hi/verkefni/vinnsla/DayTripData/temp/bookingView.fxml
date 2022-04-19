@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="137.0" prefWidth="450.0" type="DialogPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <header>
+      <HBox prefHeight="45.0" prefWidth="450.0">
+         <children>
+            <Label fx:id="fxTitle" prefHeight="45.0" prefWidth="157.0" text="Title" underline="true">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="fxAvailableSeats" prefHeight="50.0" prefWidth="149.0" text="Available seats" />
+            <Label fx:id="fxPrice" prefHeight="45.0" prefWidth="141.0" text="Price" />
+         </children>
+      </HBox>
+   </header>
+   <content>
+      <HBox prefHeight="70.0" prefWidth="450.0" spacing="20.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Label text="Number of seats" />
+                  <ComboBox fx:id="fxNumberOfGuests" onAction="#updateAmount" prefHeight="25.0" prefWidth="150.0" promptText="Number of seats" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Label text="Total price" />
+                  <Label fx:id="fxAmount" prefHeight="25.0" prefWidth="167.0" text="Amount" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </content>
+   <ButtonType fx:id="fxBook" buttonData="OK_DONE" text="Book" />
+   <ButtonType fx:id="fxCancel" buttonData="CANCEL_CLOSE" text="Cancel" />
+</fx:root>
