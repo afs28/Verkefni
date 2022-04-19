@@ -186,7 +186,7 @@
                               <ListView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="273.0" />
                            </children>
                         </StackPane>
-                        <Button layoutX="1008.0" layoutY="688.0" mnemonicParsing="false" prefWidth="50.0" text="Next" />
+                        <Button layoutX="1008.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" text="Next" />
                      </children>
                   </AnchorPane>
             </content>
@@ -197,7 +197,7 @@
                      <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="731.0" prefWidth="1076.0">
                            <children>
-                              <StackPane layoutX="15.0" layoutY="14.0" prefHeight="150.0" prefWidth="1047.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                              <StackPane layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="1044.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                                  <children>
                                     <ChoiceBox fx:id="fxFlightsNoPassengers" prefWidth="150.0" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
@@ -284,7 +284,7 @@
                                     </Button>
                                  </children>
                               </StackPane>
-                              <StackPane layoutX="16.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="430.0" prefWidth="1046.0">
+                              <StackPane layoutX="14.0" layoutY="246.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="428.0" prefWidth="1044.0">
                                  <children>
                                     <TableView prefHeight="200.0" prefWidth="200.0">
                                       <columns>
@@ -302,7 +302,7 @@
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
                               </Label>
-                              <StackPane layoutX="738.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                              <StackPane layoutX="736.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                                  <children>
                                     <CheckBox mnemonicParsing="false" text="Popularity" StackPane.alignment="BOTTOM_CENTER">
                                        <font>
@@ -338,8 +338,8 @@
                                     </Label>
                                  </children>
                               </StackPane>
-                              <Button layoutX="16.0" layoutY="682.0" mnemonicParsing="false" prefWidth="50.0" text="Back" />
-                              <Button layoutX="1010.0" layoutY="682.0" mnemonicParsing="false" prefWidth="50.0" text="Next" />
+                              <Button layoutX="16.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" text="Back" />
+                              <Button layoutX="1010.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" text="Next" />
                            </children>
                         </AnchorPane>
                      </content>
@@ -455,7 +455,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <StackPane layoutX="735.0" layoutY="170.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                        <StackPane layoutX="736.0" layoutY="168.0" prefHeight="71.0" prefWidth="323.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                            <children>
                               <CheckBox mnemonicParsing="false" text="Popularity" StackPane.alignment="BOTTOM_CENTER">
                                  <font>
@@ -562,8 +562,8 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <Button layoutX="14.0" layoutY="688.0" mnemonicParsing="false" prefWidth="50.0" text="Back" />
-                        <Button layoutX="1008.0" layoutY="688.0" mnemonicParsing="false" prefWidth="50.0" text="Next" />
+                        <Button layoutX="14.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" text="Back" />
+                        <Button layoutX="1008.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" text="Next" />
                      </children></AnchorPane>
               </content>
             </Tab>
