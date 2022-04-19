@@ -695,7 +695,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <StackPane layoutX="426.0" layoutY="168.0" prefHeight="71.0" prefWidth="633.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff;">
+                        <StackPane layoutX="426.0" layoutY="168.0" prefHeight="71.0" prefWidth="633.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #dbffff; -fx-background-radius: 10;">
                            <children>
                               <CheckBox mnemonicParsing="false" text="Popularity" StackPane.alignment="BOTTOM_CENTER">
                                  <font>
