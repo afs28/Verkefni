@@ -24,28 +24,6 @@ public class Controller implements Initializable {
     @FXML
     public ComboBox fxDayTripsArrivalTime;
     @FXML
-    public TableColumn fxTitleColumn;
-    @FXML
-    public TableColumn fxAvailableSeatsColumn;
-    @FXML
-    public TableColumn fxDateColumn;
-    @FXML
-    public TableColumn fxDurationColumn;
-    @FXML
-    public TableColumn fxPriceColumn;
-    @FXML
-    public TableColumn fxActivityColumn;
-    @FXML
-    public TableColumn fxLocationColumn;
-    @FXML
-    public TableColumn fxLanguageColumn;
-    @FXML
-    public TableColumn fxRatingColumn;
-    @FXML
-    public TableColumn fxDateAddedColumn;
-    @FXML
-    public TableView fxTable;
-    @FXML
     private ChoiceBox<String> fxFlightsNoPassengers;
 
     @Override

@@ -21,7 +21,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.verkefni.vidmot.Controller">
+<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1077.0" style="-fx-background-color: #f0ffff;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -369,7 +369,7 @@
                                           </InnerShadow>
                                        </effect>
                                     </ChoiceBox>
-                                    <DatePicker style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                                    <DatePicker fx:id="fxDepartureDate" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
                                           <Insets left="470.0" right="20.0" top="100.0" />
                                        </StackPane.margin>
@@ -397,7 +397,7 @@
                                           <Insets left="670.0" right="20.0" top="100.0" />
                                        </StackPane.margin>
                                     </Label>
-                                    <DatePicker style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                                    <DatePicker fx:id="fxArrivalDate" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
                                           <Insets left="770.0" right="20.0" top="100.0" />
                                        </StackPane.margin>
@@ -559,19 +559,7 @@
                                     <Insets left="10.0" top="90.0" />
                                  </StackPane.margin>
                               </Label>
-                              <ChoiceBox fx:id="fxHotelsNoRooms" prefWidth="50.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
-                                 <StackPane.margin>
-                                    <Insets left="400.0" top="50.0" />
-                                 </StackPane.margin>
-                                 <effect>
-                                    <InnerShadow blurType="GAUSSIAN">
-                                       <color>
-                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
-                                       </color>
-                                    </InnerShadow>
-                                 </effect>
-                              </ChoiceBox>
-                              <ChoiceBox fx:id="fxHotelsNoAdults" prefWidth="50.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                              <ChoiceBox fx:id="fxCapacity" prefWidth="50.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
                                     <Insets left="130.0" top="50.0" />
                                  </StackPane.margin>
@@ -583,7 +571,7 @@
                                     </InnerShadow>
                                  </effect>
                               </ChoiceBox>
-                              <ChoiceBox fx:id="fxHotelsNoChildren" prefWidth="100.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                              <ChoiceBox fx:id="fxTypeOfRoom" prefWidth="100.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
                                     <Insets left="130.0" top="90.0" />
                                  </StackPane.margin>
@@ -600,12 +588,12 @@
                                     <Font size="15.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets left="500.0" top="50.0" />
+                                    <Insets left="600.0" top="50.0" />
                                  </StackPane.margin>
                               </Label>
-                              <DatePicker style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                              <DatePicker fx:id="fxHotelArrivalDate" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
-                                    <Insets left="600.0" top="50.0" />
+                                    <Insets left="700.0" top="50.0" />
                                  </StackPane.margin>
                                  <effect>
                                     <InnerShadow blurType="GAUSSIAN">
@@ -638,7 +626,7 @@
                                     <Insets left="300.0" top="90.0" />
                                  </StackPane.margin>
                               </Label>
-                              <ChoiceBox prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                              <ChoiceBox fx:id="fxHotelLocation" prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
                                     <Insets left="400.0" top="90.0" />
                                  </StackPane.margin>
@@ -658,6 +646,18 @@
                                     <Insets left="10.0" top="10.0" />
                                  </StackPane.margin>
                               </Label>
+                              <ComboBox fx:id="fxLengthOfStay" prefWidth="100.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                                 <effect>
+                                    <InnerShadow blurType="GAUSSIAN">
+                                       <color>
+                                          <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                                       </color>
+                                    </InnerShadow>
+                                 </effect>
+                                 <StackPane.margin>
+                                    <Insets left="400.0" top="50.0" />
+                                 </StackPane.margin>
+                              </ComboBox>
                            </children>
                            <effect>
                               <InnerShadow blurType="GAUSSIAN">
@@ -671,8 +671,11 @@
                            <children>
                               <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f0ffff;">
                                 <columns>
-                                  <TableColumn prefWidth="75.0" text="C1" />
-                                  <TableColumn prefWidth="75.0" text="C2" />
+                                  <TableColumn prefWidth="206.00003051757812" text="RoomID" />
+                                  <TableColumn minWidth="0.0" prefWidth="222.6666259765625" text="Capacity" />
+                                    <TableColumn prefWidth="157.33328247070312" text="Cost" />
+                                    <TableColumn prefWidth="232.00006103515625" text="Room type" />
+                                    <TableColumn prefWidth="228.0" text="Address" />
                                 </columns>
                                  <effect>
                                     <InnerShadow blurType="GAUSSIAN">
@@ -832,7 +835,7 @@
                                     <Insets left="100.0" top="100.0" />
                                  </StackPane.margin>
                               </Label>
-                              <ComboBox fx:id="fxDayTripsDuration" prefWidth="100.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                              <ComboBox fx:id="fxActivity" prefWidth="100.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
                                     <Insets left="200.0" top="50.0" />
                                  </StackPane.margin>
@@ -844,7 +847,7 @@
                                     </InnerShadow>
                                  </effect>
                               </ComboBox>
-                              <ComboBox fx:id="fxDayTripsArrivalTime" prefWidth="100.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                              <ComboBox fx:id="fxLocation" prefWidth="100.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                  <StackPane.margin>
                                     <Insets left="200.0" top="100.0" />
                                  </StackPane.margin>
@@ -880,7 +883,7 @@
                                     <Insets right="100.0" top="100.0" />
                                  </StackPane.margin>
                               </Label>
-                              <ComboBox prefWidth="100.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_CENTER">
+                              <ComboBox fx:id="fxLanguage" prefWidth="100.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_CENTER">
                                  <StackPane.margin>
                                     <Insets left="125.0" top="50.0" />
                                  </StackPane.margin>
@@ -892,7 +895,7 @@
                                     </InnerShadow>
                                  </effect>
                               </ComboBox>
-                              <DatePicker style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_CENTER">
+                              <DatePicker fx:id="fxDayTripDate" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_CENTER">
                                  <StackPane.margin>
                                     <Insets left="200.0" top="100.0" />
                                  </StackPane.margin>
