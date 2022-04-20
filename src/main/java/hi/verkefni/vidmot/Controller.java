@@ -76,9 +76,17 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //choice og comboboxes
         setFXFlightsChoiceBox();
 
+        //back og next takkar
         fxFlightsBackButton.setOnAction(fxFlightsBackButtonEvent);
+        fxFlightsNextButton.setOnAction(fxFlightsNextButtonEvent);
+        fxHotelsBackButton.setOnAction(fxHotelsBackButtonEvent);
+        fxHotelsNextButton.setOnAction(fxHotelsNextButtonEvent);
+        fxDayTripsBackButton.setOnAction(fxDayTripsBackButtonEvent);
+        fxDayTripsNextButton.setOnAction(fxDayTripsNextButtonEvent);
+        fxOrderBackButton.setOnAction(fxOrderSummaryBackButtonEvent);
     }
 
 
@@ -100,6 +108,56 @@ public class Controller implements Initializable {
             fxTabPane.getSelectionModel().select(fxMyAccountTab);
         }
     };
+
+    //Event handler fyrir fxFlightsNextButton
+    EventHandler<ActionEvent> fxFlightsNextButtonEvent = new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent e)
+        {
+            fxTabPane.getSelectionModel().select(fxHotelsTab);
+        }
+    };
+
+    //Event handler fyrir fxHotelsBackButton
+    EventHandler<ActionEvent> fxHotelsBackButtonEvent = new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent e)
+        {
+            fxTabPane.getSelectionModel().select(fxFlightsTab);
+        }
+    };
+
+    //Event handler fyrir fxHotelsNextButton
+    EventHandler<ActionEvent> fxHotelsNextButtonEvent = new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent e)
+        {
+            fxTabPane.getSelectionModel().select(fxDayTripsTab);
+        }
+    };
+
+    //Event handler fyrir fxDayTripsBackButton
+    EventHandler<ActionEvent> fxDayTripsBackButtonEvent = new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent e)
+        {
+            fxTabPane.getSelectionModel().select(fxHotelsTab);
+        }
+    };
+
+    //event handler fyrir fxDayTripsNextButton
+    EventHandler<ActionEvent> fxDayTripsNextButtonEvent = new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent e)
+        {
+            fxTabPane.getSelectionModel().select(fxOrderSummaryTab);
+        }
+    };
+
+    //event handler fyrir fxOrderBackButton
+    EventHandler<ActionEvent> fxOrderSummaryBackButtonEvent = new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent e)
+        {
+            fxTabPane.getSelectionModel().select(fxDayTripsTab);
+        }
+    };
+
+
 
 
 }
