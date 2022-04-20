@@ -72,6 +72,8 @@ public class Controller implements Initializable {
     @FXML
     public Button fxOrderButton;
     @FXML
+    public Button fxAcountNextButton;
+    @FXML
     private ChoiceBox<String> fxFlightsNoPassengers;
 
     @Override
@@ -87,6 +89,7 @@ public class Controller implements Initializable {
         fxDayTripsBackButton.setOnAction(fxDayTripsBackButtonEvent);
         fxDayTripsNextButton.setOnAction(fxDayTripsNextButtonEvent);
         fxOrderBackButton.setOnAction(fxOrderSummaryBackButtonEvent);
+        fxAcountNextButton.setOnAction(fxMyOrderNextButtonEvent);
     }
 
 
@@ -100,6 +103,14 @@ public class Controller implements Initializable {
         fxOneWayRoundTrip.getItems().addAll( "", "Round trip", "One way trip");
         fxOneWayRoundTrip.getSelectionModel().select("");
     }
+
+    //Event handler fyrir fxFlightsBackButton
+    EventHandler<ActionEvent> fxMyOrderNextButtonEvent = new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent e)
+        {
+            fxTabPane.getSelectionModel().select(fxFlightsTab);
+        }
+    };
 
     //Event handler fyrir fxFlightsBackButton
     EventHandler<ActionEvent> fxFlightsBackButtonEvent = new EventHandler<ActionEvent>() {
