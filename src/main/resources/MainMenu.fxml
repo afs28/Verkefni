@@ -21,11 +21,11 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane prefHeight="766.0" prefWidth="1079.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.verkefni.vidmot.Controller">
    <content>
-      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1077.0" style="-fx-background-color: #f0ffff;" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="fxTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1077.0" style="-fx-background-color: #f0ffff;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="My account">
+          <Tab fx:id="fxMyAccountTab" text="My account">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -266,7 +266,7 @@
                                  </effect></ListView>
                            </children>
                         </StackPane>
-                        <Button layoutX="1000.0" layoutY="690.0" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #f0ffff;" text="Next">
+                        <Button fx:id="fxAcountNextButton" layoutX="1000.0" layoutY="690.0" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #f0ffff;" text="Next">
                            <effect>
                               <InnerShadow blurType="GAUSSIAN">
                                  <color>
@@ -281,7 +281,7 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Flights">
+          <Tab fx:id="fxFlightsTab" text="Flights">
             <content>
                   <ScrollPane>
                      <content>
@@ -507,7 +507,7 @@
                                     </Label>
                                  </children>
                               </StackPane>
-                              <Button layoutX="16.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" style="-fx-background-color: #f0ffff;" text="Back">
+                              <Button fx:id="fxFlightsBackButton" layoutX="16.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" style="-fx-background-color: #f0ffff;" text="Back">
                                  <effect>
                                     <InnerShadow blurType="GAUSSIAN">
                                        <color>
@@ -515,7 +515,7 @@
                                        </color>
                                     </InnerShadow>
                                  </effect></Button>
-                              <Button layoutX="1010.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" style="-fx-background-color: #f0ffff;" text="Next">
+                              <Button fx:id="fxFlightsNextButton" layoutX="1010.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" style="-fx-background-color: #f0ffff;" text="Next">
                                  <effect>
                                     <InnerShadow blurType="GAUSSIAN">
                                        <color>
@@ -529,7 +529,7 @@
                   </ScrollPane>
             </content>
           </Tab>
-            <Tab text="Hotels">
+            <Tab fx:id="fxHotelsTab" text="Hotels">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -794,7 +794,7 @@
                               </InnerShadow>
                            </effect>
                         </StackPane>
-                        <Button layoutX="14.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" style="-fx-background-color: #f0ffff;" text="Back">
+                        <Button fx:id="fxHotelsBackButton" layoutX="14.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" style="-fx-background-color: #f0ffff;" text="Back">
                            <effect>
                               <InnerShadow blurType="GAUSSIAN">
                                  <color>
@@ -802,7 +802,7 @@
                                  </color>
                               </InnerShadow>
                            </effect></Button>
-                        <Button layoutX="1008.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" style="-fx-background-color: #f0ffff;" text="Next">
+                        <Button fx:id="fxHotelsNextButton" layoutX="1008.0" layoutY="686.0" mnemonicParsing="false" prefWidth="50.0" style="-fx-background-color: #f0ffff;" text="Next">
                            <effect>
                               <InnerShadow blurType="GAUSSIAN">
                                  <color>
@@ -813,7 +813,7 @@
                      </children></AnchorPane>
               </content>
             </Tab>
-            <Tab text="Daytrips">
+            <Tab fx:id="fxDayTripsTab" text="Daytrips">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -962,7 +962,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <Button layoutX="15.0" layoutY="690.0" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #dbffff;" text="Back">
+                        <Button fx:id="fxDayTripsBackButton" layoutX="15.0" layoutY="690.0" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #dbffff;" text="Back">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -973,7 +973,7 @@
                                  </color>
                               </InnerShadow>
                            </effect></Button>
-                        <Button layoutX="1000.0" layoutY="690.0" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #dbffff;" text="Next">
+                        <Button fx:id="fxDayTripsNextButton" layoutX="1000.0" layoutY="690.0" mnemonicParsing="false" prefWidth="60.0" style="-fx-background-color: #dbffff;" text="Next">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -1030,7 +1030,7 @@
                      </children></AnchorPane>
               </content>
             </Tab>
-            <Tab text="Order summary">
+            <Tab fx:id="fxOrderSummaryTab" text="Order summary">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f0ffff;">
                      <children>
@@ -1204,7 +1204,7 @@
                               </HBox>
                            </children>
                         </StackPane>
-                        <Button fx:id="fxBackButton" layoutX="15.0" layoutY="690.0" mnemonicParsing="false" style="-fx-background-color: #dbffff;" text="Back">
+                        <Button fx:id="fxOrderBackButton" layoutX="15.0" layoutY="690.0" mnemonicParsing="false" style="-fx-background-color: #dbffff;" text="Back">
                            <font>
                               <Font size="15.0" />
                            </font>
