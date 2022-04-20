@@ -1,4 +1,5 @@
 package hi.verkefni.vinnsla.FlightData.Controllers;
+import java.io.File;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import hi.verkefni.vinnsla.FlightData.Database.FlightDB;
 import hi.verkefni.vinnsla.FlightData.Objects.*;
 
 public class ReviewController {
+    private static final String DB_PATH = "Verkefni/src/main/java/hi/verkefni/vinnsla/FlightData/Database" + File.separator + "flightDB.db";
     private ArrayList<Review> allReviews;
     FlightDB fdb = new FlightDB();
     private Connection connection = null;
@@ -29,7 +31,7 @@ public class ReviewController {
         ArrayList<Review> reviews = new ArrayList<>();
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -71,7 +73,7 @@ public class ReviewController {
         String text = review.getText();
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             String newReview = "INSERT INTO Reviews(customerName, rating, text, flightNo) VALUES(?, ?, ?, ?);";
             PreparedStatement ps = connection.prepareStatement(newReview);
@@ -111,7 +113,7 @@ public class ReviewController {
         String queryNumberOfRatings = "SELECT NumberOfRatings FROM Flights WHERE FlightNo='" + flightNo + "'";
         String queryTotalRating = "SELECT TotalRating FROM Flights WHERE FlightNo='" + flightNo + "'";
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(queryNumberOfRatings);
             rs.next();
@@ -140,7 +142,7 @@ public class ReviewController {
         fdb.ConnectDriver();
         String query = "DELETE FROM Reviews WHERE FlightNo='" + review.getFlight().getFlightNumber() + "' AND CustomerEmail=" + review.getCustomer().getEmail();
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
             Statement statement = connection.createStatement();
             statement.executeUpdate(query);
         } catch (SQLException e) {
@@ -157,7 +159,7 @@ public class ReviewController {
         String query = "SELECT * FROM reviews WHERE CustomerEmail='" + customerEmail + "'";
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 

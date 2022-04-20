@@ -1,5 +1,6 @@
 package hi.verkefni.vinnsla.FlightData.Controllers;
 
+import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -7,6 +8,7 @@ import hi.verkefni.vinnsla.FlightData.Database.FlightDB;
 import hi.verkefni.vinnsla.FlightData.Objects.*;
 
 public class CustomerController {
+    private static final String DB_PATH = "Verkefni/src/main/java/hi/verkefni/vinnsla/FlightData/Database" + File.separator + "flightDB.db";
     private Connection connection = null;
     private ArrayList<Customer> allCustomers;
     private FlightDB fdb;
@@ -22,7 +24,7 @@ public class CustomerController {
         ArrayList<Customer> customers = new ArrayList<>();
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -59,7 +61,7 @@ public class CustomerController {
         String nation = customer.getNation();
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
             String newCustomer = "INSERT INTO Customers(CustomerEmail, CustomerPhone, CustomerName, CustomerAddress, CustomerPostalCode, CustomerNationality) VALUES(?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = connection.prepareStatement(newCustomer);
             ps.setString(1, email);
@@ -88,7 +90,7 @@ public class CustomerController {
         fdb.ConnectDriver();
         String query = "DELETE FROM Customers WHERE CustomerSsno=" + customerSsno;
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
             Statement statement = connection.createStatement();
             statement.executeUpdate(query);
         } catch (SQLException e) {
@@ -105,7 +107,7 @@ public class CustomerController {
         Customer customer;
         String query = "SELECT * FROM Customers WHERE CustomerEmail='" + customerEmail + "'";
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);

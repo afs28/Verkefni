@@ -1,14 +1,16 @@
 package hi.verkefni.vinnsla.FlightData.Controllers;
 
 
+import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
 import hi.verkefni.vinnsla.FlightData.Database.FlightDB;
 import hi.verkefni.vinnsla.FlightData.Objects.*;
 
 public class BookingController {
+    private static final String DB_PATH = "Verkefni/src/main/java/hi/verkefni/vinnsla/FlightData/Database" + File.separator + "flightDB.db";
     private Connection connection = null;
-    static CustomerController cc;
+    static CustomerController cc = new CustomerController();
     static FlightController fc = new FlightController();
     private ArrayList<Booking> allBookings;
     private FlightDB fdb;
@@ -20,12 +22,11 @@ public class BookingController {
     public String BookSeat(Seat seat, String flightNumber) {
         fdb.ConnectDriver();
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             int row = seat.getRow();
             int seatChar = seat.seatCharToInt();
             String query = "SELECT isBooked FROM Seats WHERE SeatNr = " + row + "" + seatChar + " AND FlightNumber = " + flightNumber;
-            System.out.println(query);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 
@@ -55,7 +56,7 @@ public class BookingController {
     public void CancelSeat(Seat seat) {
         fdb.ConnectDriver();
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             int row = seat.getRow();
             int seatChar = seat.seatCharToInt();
@@ -77,7 +78,7 @@ public class BookingController {
         ArrayList<Booking> bookings = new ArrayList<>();
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -111,7 +112,7 @@ public class BookingController {
         ResultSet rs;
         Booking booking = null;
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
             Statement statement = connection.createStatement();
             rs = statement.executeQuery(query);
             rs.next();
@@ -145,7 +146,7 @@ public class BookingController {
         String flightNo = booking.getFlight().getFlightNumber();
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
             String newBooking = "INSERT INTO Bookings(seat, pillowOrdered, customerEmail, FlightNo) VALUES(?, ?, ?, ?);";
             PreparedStatement ps = connection.prepareStatement(newBooking);
             ps.setString(1, seat);
@@ -177,7 +178,7 @@ public class BookingController {
         fdb.ConnectDriver();
         String query = "DELETE FROM Bookings WHERE FlightNo='" + flightNr + "' AND CustomerEmail=" + customer.getEmail();
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
             Statement statement = connection.createStatement();
             statement.executeUpdate(query);
             DeleteBooking(GetBookingByCustomerAndFlightNumber(customer, flightNr));
@@ -192,7 +193,7 @@ public class BookingController {
         fdb.ConnectDriver();
         String query = "DELETE FROM Bookings WHERE CustomerEmail='" + booking.getCustomer().getEmail() + "' AND FlightNo='" + booking.getFlight() + "'";
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
             Statement statement = connection.createStatement();
             statement.executeUpdate(query);
         } catch (SQLException e) {
