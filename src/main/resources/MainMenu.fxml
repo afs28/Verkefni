@@ -443,15 +443,15 @@
                               </StackPane>
                               <StackPane layoutX="14.0" layoutY="246.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="428.0" prefWidth="1044.0">
                                  <children>
-                                    <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f0ffff;">
+                                    <TableView fx:id="fxTableViewFlights" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f0ffff;">
                                       <columns>
-                                        <TableColumn prefWidth="150.0" text="Flight number" />
-                                        <TableColumn prefWidth="150.0" text="Arrival" />
-                                          <TableColumn prefWidth="150.0" text="Departure" />
-                                          <TableColumn prefWidth="150.0" text="Date" />
-                                          <TableColumn prefWidth="150.0" text="Cost" />
-                                          <TableColumn prefWidth="150.0" text="Seats left" />
-                                          <TableColumn minWidth="0.0" prefWidth="150.0" text="Aircraft" />
+                                        <TableColumn fx:id="fxFlightNumberCol" prefWidth="150.0" text="Flight number" />
+                                        <TableColumn fx:id="fxArrivalCol" prefWidth="150.0" text="Arrival" />
+                                          <TableColumn fx:id="fxDepartureCol" prefWidth="150.0" text="Departure" />
+                                          <TableColumn fx:id="fxFlightDateCol" prefWidth="150.0" text="Date" />
+                                          <TableColumn fx:id="fxFlightCostCol" prefWidth="150.0" text="Cost" />
+                                          <TableColumn fx:id="fxFlightSeatsLeftCol" prefWidth="150.0" text="Seats left" />
+                                          <TableColumn fx:id="fxFlightAircraftCol" minWidth="0.0" prefWidth="150.0" text="Aircraft" />
                                       </columns>
                                        <effect>
                                           <InnerShadow blurType="GAUSSIAN">
