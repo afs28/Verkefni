@@ -32,11 +32,53 @@ public class Controller implements Initializable {
     @FXML
     public Tab fxFlightsTab;
     @FXML
+    public Tab fxHotelsTab;
+    @FXML
+    public ChoiceBox fxCapacity;
+    @FXML
+    public ChoiceBox fxTypeOfRoom;
+    @FXML
+    public DatePicker fxHotelArrivalDate;
+    @FXML
+    public Button fxHotelsSearch;
+    @FXML
+    public ChoiceBox fxHotelLocation;
+    @FXML
+    public ComboBox fxLengthOfStay;
+    @FXML
+    public Button fxHotelsBackButton;
+    @FXML
+    public Button fxHotelsNextButton;
+    @FXML
+    public Tab fxDayTripsTab;
+    @FXML
+    public ComboBox fxActivity;
+    @FXML
+    public ComboBox fxLocation;
+    @FXML
+    public ComboBox fxLanguage;
+    @FXML
+    public DatePicker fxDayTripDate;
+    @FXML
+    public Button fxDayTripsBackButton;
+    @FXML
+    public Button fxDayTripsNextButton;
+    @FXML
+    public Tab fxOrderSummaryTab;
+    @FXML
+    public Label fxTotalPrice;
+    @FXML
+    public Button fxOrderBackButton;
+    @FXML
+    public Button fxOrderButton;
+    @FXML
     private ChoiceBox<String> fxFlightsNoPassengers;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setFXFlightsChoiceBox();
+
+        fxFlightsBackButton.setOnAction(fxFlightsBackButtonEvent);
     }
 
 
@@ -51,6 +93,13 @@ public class Controller implements Initializable {
         fxOneWayRoundTrip.getSelectionModel().select("");
     }
 
+    //Event handler fyrir fxFlightsBackButton
+    EventHandler<ActionEvent> fxFlightsBackButtonEvent = new EventHandler<ActionEvent>() {
+        public void handle(ActionEvent e)
+        {
+            fxTabPane.getSelectionModel().select(fxMyAccountTab);
+        }
+    };
 
 
 }
