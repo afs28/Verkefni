@@ -5,19 +5,21 @@
 <?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<fx:root style="-fx-background-color: #f0ffff;" type="DialogPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root style="-fx-background-color: #f0ffff; -fx-border-color: black;" type="DialogPane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <content>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="600.0">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="600.0" style="-fx-background-color: #f0ffff;">
          <children>
             <HBox prefHeight="174.0" prefWidth="580.0">
                <children>
                   <Label prefWidth="70.0" text="Username:">
                      <HBox.margin>
-                        <Insets left="170.0" right="5.0" top="140.0" />
+                        <Insets left="165.0" right="5.0" top="140.0" />
                      </HBox.margin>
                      <font>
                         <Font size="15.0" />
@@ -25,12 +27,19 @@
                   </Label>
                   <TextField fx:id="fxUserId" style="-fx-background-color: #dbffff; -fx-border-radius: 10; -fx-background-radius: 10;">
                      <HBox.margin>
-                        <Insets left="5.0" top="140.0" />
+                        <Insets left="10.0" top="140.0" />
                      </HBox.margin>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
                   </TextField>
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #f0ffff;">
                <children>
                   <Label prefWidth="70.0" text="Password:">
                      <HBox.margin>
@@ -44,6 +53,13 @@
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.4274509847164154" green="0.5803921818733215" blue="0.6901960968971252" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
                   </TextField>
                </children>
             </HBox>

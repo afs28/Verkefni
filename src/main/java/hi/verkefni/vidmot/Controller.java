@@ -90,8 +90,6 @@ public class Controller implements Initializable {
         fxDayTripsNextButton.setOnAction(fxDayTripsNextButtonEvent);
         fxOrderBackButton.setOnAction(fxOrderSummaryBackButtonEvent);
         fxAcountNextButton.setOnAction(fxMyOrderNextButtonEvent);
-
-
     }
 
 

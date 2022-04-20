@@ -11,8 +11,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class DayTripDataConnection {
-    private static final String SQL_PATH = "src/main/java/hi/verkefni/vinnsla/DayTripData/Database" + File.separator + "schema.sql";
-    private static final String DB_PATH = "src/main/java/hi/verkefni/vinnsla/DayTripData/Database" + File.separator + "dataBases.db";
+    private static final String SQL_PATH = "Verkefni/src/main/java/hi/verkefni/vinnsla/DayTripData/Database" + File.separator + "schema.sql";
+    private static final String DB_PATH = "Verkefni/src/main/java/hi/verkefni/vinnsla/DayTripData/Database" + File.separator + "dataBases.db";
     private Connection connection;
     private Statement statement;
 
