@@ -2,9 +2,9 @@ package hi.verkefni.vinnsla.FlightData.Objects;
 public class Seat{
     private int row;
     private char seatChar;
-    public Seat(int r, char sc){
-        this.row = r;
-        this.seatChar = sc;
+    public Seat(int row, char seatChar){
+        this.row = row;
+        this.seatChar = seatChar;
     }
 
     public int seatCharToInt(){
@@ -27,5 +27,13 @@ public class Seat{
 
     public int getSeatChar(){
         return this.seatChar;
+    }
+
+    @Override
+    public String toString() {
+        return "Seat{" +
+                "row=" + row +
+                ", seatChar=" + seatChar +
+                '}';
     }
 }

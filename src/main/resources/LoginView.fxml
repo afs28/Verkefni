@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
 <?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<fx:root type="DialogPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root style="-fx-background-color: #f0ffff;" type="DialogPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="600.0">
          <children>
@@ -18,8 +19,11 @@
                      <HBox.margin>
                         <Insets left="170.0" right="5.0" top="140.0" />
                      </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
                   </Label>
-                  <TextField fx:id="fxUserId">
+                  <TextField fx:id="fxUserId" style="-fx-background-color: #dbffff; -fx-border-radius: 10; -fx-background-radius: 10;">
                      <HBox.margin>
                         <Insets left="5.0" top="140.0" />
                      </HBox.margin>
@@ -32,8 +36,11 @@
                      <HBox.margin>
                         <Insets left="170.0" right="5.0" />
                      </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
                   </Label>
-                  <TextField fx:id="fxPassword">
+                  <TextField fx:id="fxPassword" style="-fx-background-color: #dbffff; -fx-border-radius: 10; -fx-background-radius: 10;">
                      <HBox.margin>
                         <Insets left="5.0" />
                      </HBox.margin>
@@ -44,9 +51,13 @@
       </VBox>
    </content>
    <header>
-      <Label alignment="CENTER" style="-fx-border-color: black; -fx-background-color: #dbffff;" text="Welcome! Please sign in or create a new account.">
+      <Label alignment="CENTER" style="-fx-background-color: #dbffff;" text="Welcome! Please sign in or create a new account.">
          <font>
             <Font size="25.0" />
          </font></Label>
    </header>
+   <buttonTypes>
+      <ButtonType fx:constant="OK" />
+      <ButtonType fx:constant="CANCEL" />
+   </buttonTypes>
 </fx:root>

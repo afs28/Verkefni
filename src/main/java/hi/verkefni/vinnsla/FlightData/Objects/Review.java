@@ -1,14 +1,16 @@
 package hi.verkefni.vinnsla.FlightData.Objects;
+import java.time.LocalDate;
 import java.util.Date;
+
 
 public class Review implements Comparable<Review>{
     private Flight flight;
     private Customer customer;
-    private Date date;
+    private LocalDate date;
     private double rating;
     private String text;
 
-    public Review(Flight flight, Date date, double rating, String text, Customer customer) {
+    public Review(Flight flight, LocalDate date, double rating, String text, Customer customer) {
         this.flight = flight;
         this.date = date;
         this.rating = rating;
@@ -20,7 +22,7 @@ public class Review implements Comparable<Review>{
         return this.flight;
     }
 
-    public Date getDate(){
+    public LocalDate getDate(){
         return this.date;
     }
 
@@ -38,7 +40,7 @@ public class Review implements Comparable<Review>{
         this.flight = flight;
     }
 
-    public void setDate(Date date){
+    public void setDate(LocalDate date){
         this.date = date;
     }
 

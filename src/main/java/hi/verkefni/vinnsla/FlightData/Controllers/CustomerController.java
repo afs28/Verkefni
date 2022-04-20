@@ -7,16 +7,16 @@ import hi.verkefni.vinnsla.FlightData.Database.FlightDB;
 import hi.verkefni.vinnsla.FlightData.Objects.*;
 
 public class CustomerController {
-    private static Connection connection = null;
+    private Connection connection = null;
     private ArrayList<Customer> allCustomers;
-    private static FlightDB fdb;
+    private FlightDB fdb;
 
     public CustomerController() {
         fdb = new FlightDB();
         allCustomers = GetAllCustomers();
     }
 
-    public static ArrayList<Customer> GetAllCustomers() {
+    public ArrayList<Customer> GetAllCustomers() {
         fdb.ConnectDriver();
         String query = "SELECT * FROM Customers";
         ArrayList<Customer> customers = new ArrayList<>();
@@ -28,8 +28,6 @@ public class CustomerController {
             ResultSet rs = statement.executeQuery(query);
 
             while(rs.next()) {
-
-                long ssno = rs.getLong("CustomerSsno");
                 String email = rs.getString("CustomerEmail");
                 int phone = rs.getInt("CustomerPhone");
                 String name = rs.getString("CustomerName");
@@ -37,7 +35,7 @@ public class CustomerController {
                 int postalCode = rs.getInt("CustomerPostalCode");
                 String nationality = rs.getString("CustomerNationality");
 
-                Customer customer = new Customer(name, ssno, phone, email, address, postalCode, nationality);
+                Customer customer = new Customer(name, phone, email, address, postalCode, nationality);
                 customers.add(customer);
             }
         }
@@ -54,7 +52,6 @@ public class CustomerController {
     public void CreateNewCustomer(Customer customer) {
         fdb.ConnectDriver();
         String name = customer.getName();
-        long ssno = customer.getSsno();
         int phone = customer.getPhone();
         String email = customer.getEmail();
         String address = customer.getAddress();
@@ -63,15 +60,14 @@ public class CustomerController {
 
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
-            String newCustomer = "INSERT INTO Customers(CustomerSsno, CustomerEmail, CustomerPhone, CustomerName, CustomerAddress, CustomerPostalCode, CustomerNationality) VALUES(?, ?, ?, ?, ?, ?, ?)";
+            String newCustomer = "INSERT INTO Customers(CustomerEmail, CustomerPhone, CustomerName, CustomerAddress, CustomerPostalCode, CustomerNationality) VALUES(?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = connection.prepareStatement(newCustomer);
-            ps.setLong(1, ssno);
-            ps.setString(2, email);
-            ps.setInt(3, phone);
-            ps.setString(4, name);
-            ps.setString(5, address);
-            ps.setInt(6, postalCode);
-            ps.setString(7, nation);
+            ps.setString(1, email);
+            ps.setInt(2, phone);
+            ps.setString(3, name);
+            ps.setString(4, address);
+            ps.setInt(5, postalCode);
+            ps.setString(6, nation);
             ps.executeUpdate();
         }
         catch (SQLException e) {
@@ -84,7 +80,7 @@ public class CustomerController {
     }
 
     public void CreateNewCustomer(String name, long ssno, int phone, String email, String address, int postalCode, String nation) {
-        Customer customer = new Customer(name, ssno, phone, email, address, postalCode, nation);
+        Customer customer = new Customer(name, phone, email, address, postalCode, nation);
         CreateNewCustomer(customer);
     }
 
@@ -104,10 +100,10 @@ public class CustomerController {
     }
 
     // TODO
-    public static Customer GetCustomerBySsno(long ssno) {
+    public Customer GetCustomerByEmail(String customerEmail) {
         fdb.ConnectDriver();
         Customer customer;
-        String query = "SELECT * FROM Customers WHERE CustomerSsno='" + ssno + "'";
+        String query = "SELECT * FROM Customers WHERE CustomerEmail='" + customerEmail + "'";
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
 
@@ -115,14 +111,14 @@ public class CustomerController {
             ResultSet rs = statement.executeQuery(query);
 
             rs.next();
-            String email = rs.getString("CustomerEmail");
+            long ssno = rs.getLong("CustomerSsno");
             int phone = rs.getInt("CustomerPhone");
             String name = rs.getString("CustomerName");
             String address = rs.getString("CustomerAddress");
             int postalCode = rs.getInt("CustomerPostalCode");
             String nationality = rs.getString("CustomerNationality");
 
-            customer = new Customer(name, ssno, phone, email, address, postalCode, nationality);
+            customer = new Customer(name, phone, customerEmail, address, postalCode, nationality);
         }
         catch (SQLException e) {
             System.err.println(e.getMessage());

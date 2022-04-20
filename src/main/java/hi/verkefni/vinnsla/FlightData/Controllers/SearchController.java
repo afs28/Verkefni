@@ -1,4 +1,5 @@
 package hi.verkefni.vinnsla.FlightData.Controllers;
+import java.time.LocalDate;
 import java.util.Date;
 
 import hi.verkefni.vinnsla.FlightData.Database.FlightDB;
@@ -7,32 +8,12 @@ import hi.verkefni.vinnsla.FlightData.Objects.*;
 import java.util.ArrayList;
 
 public class SearchController { //wip
-    private static ArrayList<Flight> flights;
-    private static FlightDB fdb;
-    private static String s;
+    private ArrayList<Flight> flights;
+    private FlightDB fdb;
+    private String s;
     static BookingController bc = new BookingController();
     static CustomerController cc = new CustomerController();
     static FlightController fc = new FlightController();
-
-    /**
-     *
-     * @param args
-     */
-    public static void main(String[] args) {
-        ArrayList<Flight> f = filterDeparture("Akureyri");
-        ArrayList<Flight> x = filterEnt(true);
-        ArrayList<Flight> y = filterAvrRating();
-        for (Flight o : y) System.out.println(o);
-
-        /*
-        Seat seat = new Seat(1, 'r');
-        Flight f = fdb.GetFlightByFlightNumber("000CE");
-        Customer c = cc.GetCustomerBySsno(123456789);
-        Review r = new Review(f, new Date(), 5.0, "Geggjað", c);
-        bc.CreateNewBooking(seat, f, c, true, 11, r);
-
-         */
-    }
 
     public SearchController() {
         fdb = new FlightDB();
@@ -52,6 +33,14 @@ public class SearchController { //wip
         return flights;
     }
 
+    public ArrayList<Flight> filterCost(ArrayList<Flight> flightsToFilter, int low, int high) {
+        ArrayList<Flight> filtered = new ArrayList<>();
+        for (Flight f : flightsToFilter) {
+            if (f.getCost() >= low && f.getCost() <= high) filtered.add(f);
+        }
+        return filtered;
+    }
+
     /**
      *
      * @param departure Departure airport
@@ -65,17 +54,33 @@ public class SearchController { //wip
         return flights;
     }
 
+    public ArrayList<Flight> filterDepartureAndArrival(ArrayList<Flight> flightsToFilter, String departureAirport, String arrivalAirport) {
+        ArrayList<Flight> filtered = new ArrayList<>();
+        for (Flight f : flightsToFilter) {
+            if (f.getDeparture() == departureAirport && f.getArrival() == arrivalAirport) filtered.add(f);
+        }
+        return filtered;
+    }
+
     /**
      *
      * @param departureAirport Departure airport
      * @return an ArrayList of Flight objects where flights are from departure airport
      */
-    public static ArrayList<Flight> filterDeparture(String departureAirport) {
+    public ArrayList<Flight> filterDeparture(String departureAirport) {
         if (s == null) s = "SELECT * FROM flights WHERE departure = '" + departureAirport + "'";
         else s += " AND departure='" + departureAirport + "'";
         fdb = new FlightDB();
         flights = fc.search(s);
         return flights;
+    }
+
+    public ArrayList<Flight> filterDeparture(ArrayList<Flight> flightsToFilter, String departureAirport) {
+        ArrayList<Flight> filtered = new ArrayList<>();
+        for (Flight f : flightsToFilter) {
+            if (f.getDeparture() == departureAirport) filtered.add(f);
+        }
+        return filtered;
     }
 
     /**
@@ -90,22 +95,32 @@ public class SearchController { //wip
         return flights;
     }
 
+    public ArrayList<Flight> filterDestination(ArrayList<Flight> flightsToFilter, String destinationAirport) {
+        ArrayList<Flight> filtered = new ArrayList<>();
+        for (Flight f : flightsToFilter) {
+            if (f.getArrival() == destinationAirport) filtered.add(f);
+        }
+        return filtered;
+    }
+
     /**
      *
      * @param date
      * @return
      */
-    // TODO Bíða með þetta þar sem það er vesen að parsa date úr sqlite
-    public ArrayList<Flight> filterDate(Date date) {
-        if(s == ""){
-            s = "SELECT flight FROM flights WHERE date ='" + date + "'";
-        }
-        else{
-            this.s = s + " AND date = " + date;
-        }
+    public ArrayList<Flight> filterDate(LocalDate date) {
+        if(s == null) s = "SELECT * FROM flights WHERE date ='" + date + "'";
+        else s = s + " AND date = " + date;
         flights = fc.search(s);
-        ArrayList<Flight> f = null;
-        return f;
+        return flights;
+    }
+
+    public ArrayList<Flight> filterDate(ArrayList<Flight> flightsToFilter, LocalDate date) {
+        ArrayList<Flight> filtered = new ArrayList<>();
+        for (Flight f : flightsToFilter) {
+            if (f.getDateTime() == date) filtered.add(f);
+        }
+        return filtered;
     }
 
     /**
@@ -113,7 +128,7 @@ public class SearchController { //wip
      * @param hasEntertainmentOnBoard true if searching for flights with entertainment, false otherwise
      * @return an ArrayList of Flight objects that have entertainment on board if true, and an ArrayList of Flight objects that don't have entertainment on board if false.
      */
-    public static ArrayList<Flight> filterEnt(boolean hasEntertainmentOnBoard) {
+    public ArrayList<Flight> filterEnt(boolean hasEntertainmentOnBoard) {
         int bool;
         if (hasEntertainmentOnBoard) bool = 1;
         else bool = 0;
@@ -121,6 +136,14 @@ public class SearchController { //wip
         else s += " and hasEntertainment = '" + bool + "'";
         flights = fc.search(s);
         return flights;
+    }
+
+    public ArrayList<Flight> filterEnt(ArrayList<Flight> flightsToFilter, boolean hasEntertainmentOnBoard) {
+        ArrayList<Flight> filtered = new ArrayList<>();
+        for (Flight f : flightsToFilter) {
+            if (f.getEntertainment() == hasEntertainmentOnBoard) filtered.add(f);
+        }
+        return filtered;
     }
 
     /**
@@ -138,11 +161,19 @@ public class SearchController { //wip
         return flights;
     }
 
+    public ArrayList<Flight> filterFood(ArrayList<Flight> flightsToFilter, boolean hasFoodOnBoard) {
+        ArrayList<Flight> filtered = new ArrayList<>();
+        for (Flight f : flightsToFilter) {
+            if (f.getFood() == hasFoodOnBoard) filtered.add(f);
+        }
+        return filtered;
+    }
+
     /**
      *
      * @return an ArrayList of Flight objects that have rating ???
      */
-    public static ArrayList<Flight> filterAvrRating() {
+    public ArrayList<Flight> filterAvrRating() {
         if(s == null){
             s = "SELECT * FROM flights ORDER BY rating";
         }
@@ -153,20 +184,12 @@ public class SearchController { //wip
         return flights;
     }
 
-    /**
-     *
-     */
     public void removeFilters() {
         String s = null;
         String str = "SELECT * FROM flights";
         flights = fc.search(str);
     }
 
-
-    /**
-     *
-     * @return
-     */
     public ArrayList<Flight> getFlights(){
         return this.flights;
     }

@@ -18,7 +18,7 @@ public class LoginController extends DialogPane {
 
     public LoginController(){
         // Load interface of the dialog
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LoginView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/LoginView.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {

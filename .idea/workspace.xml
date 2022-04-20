@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="Byrjaði á login screeni">
+    <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="Smá lagfæringar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Database/FlightDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Database/FlightDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +73,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/temp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Database" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -71,11 +81,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\addzh\OneDrive\Desktop\Þróun Hugbúnaðar\Verkefni\src\main\java\hi\verkefni\vinnsla\FlightData\Objects" />
+      <recent name="C:\Users\addzh\OneDrive\Desktop\Þróun Hugbúnaðar\Verkefni\src\main\java\hi\verkefni\vinnsla\FlightData\Database" />
+      <recent name="C:\Users\addzh\OneDrive\Desktop\Þróun Hugbúnaðar\Verkefni\src\main\java\hi\verkefni\vinnsla\FlightData\Controllers" />
       <recent name="C:\Users\addzh\OneDrive\Desktop\Þróun Hugbúnaðar\Verkefni\src\main\java\hi\verkefni\vinnsla\DayTripData\temp" />
       <recent name="C:\Users\addzh\OneDrive\Desktop\Þróun Hugbúnaðar\Verkefni\src\main\java\hi\verkefni\vinnsla\DayTripData\Objects" />
-      <recent name="C:\Users\addzh\OneDrive\Desktop\Þróun Hugbúnaðar\Verkefni\src\main\java\hi\verkefni\vinnsla\DayTripData\Database" />
-      <recent name="C:\Users\addzh\OneDrive\Desktop\Þróun Hugbúnaðar\Verkefni\src\main\java\hi\verkefni\vinnsla\DayTripData\Controllers" />
-      <recent name="C:\Users\addzh\OneDrive\Desktop\Þróun Hugbúnaðar\Verkefni\src\main\java\hi\verkefni\vinnsla\FlightData\Objects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\addzh\OneDrive\Desktop\Þróun Hugbúnaðar\Verkefni\src\main\java\hi\verkefni\vinnsla\HotelData\Database" />
@@ -259,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650400121944</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Smá lagfæringar">
+      <created>1650453648502</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650453648502</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -324,6 +341,7 @@
     <MESSAGE value="Adjusted some sizes" />
     <MESSAGE value="Græjaði FULLT af hlutum í vinnslu, þarf að vinna úr og púsla saman" />
     <MESSAGE value="Byrjaði á login screeni" />
-    <option name="LAST_COMMIT_MESSAGE" value="Byrjaði á login screeni" />
+    <MESSAGE value="Smá lagfæringar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Smá lagfæringar" />
   </component>
 </project>

@@ -1,5 +1,5 @@
 package hi.verkefni.vinnsla.FlightData.Objects;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Booking {
     private Seat seat;
@@ -7,17 +7,17 @@ public class Booking {
     private Customer customer;
     private boolean pillow;
     private int id;
+    private final int numberOfPassengers;
     private Review review;
 
-    public Booking(Seat seat, Flight flight, Customer customer, boolean pillow, int id, Review review) {
+    public Booking(Seat seat, Flight flight, Customer customer, boolean pillow, Review review, int numberOfPassengers) {
         this.seat = seat;
         this.flight = flight;
         this.customer = customer;
         this.pillow = pillow;
-        this.id = id;
         this.review = review;
+        this.numberOfPassengers = numberOfPassengers;
     }
-
 
     public void cancelBooking(Booking booking)  {
         this.seat = null;
@@ -28,7 +28,7 @@ public class Booking {
         this.review = null;
     }
 
-    public void changeReview(Flight flight, Date date, double rating, String text, Customer customer) {
+    public void changeReview(Flight flight, LocalDate date, double rating, String text, Customer customer) {
         this.review = new Review(flight, date, rating, text, customer);
     }
 
@@ -47,6 +47,8 @@ public class Booking {
     public boolean getPillow(){
         return this.pillow;
     }
+
+    public int getNumberOfPassengers() { return this.numberOfPassengers; }
 
     public int getId(){
         return this.id;
@@ -87,7 +89,6 @@ public class Booking {
                 ", flight=" + flight +
                 ", customer=" + customer +
                 ", pillow=" + pillow +
-                ", id=" + id +
                 ", review=" + review +
                 '}';
     }

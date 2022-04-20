@@ -1,5 +1,6 @@
 package hi.verkefni.vinnsla.FlightData.Controllers;
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -9,10 +10,13 @@ import hi.verkefni.vinnsla.FlightData.Objects.*;
 public class ReviewController {
     private ArrayList<Review> allReviews;
     FlightDB fdb = new FlightDB();
-    private static Connection connection = null;
+    private Connection connection = null;
+    private CustomerController cc;;
+    private FlightController fc;
 
-    private static CustomerController cc;;
-    private static FlightController fc;
+    public void main(String[] args) {
+        UpdateRating(fc.GetFlightByFlightNumber("123AB"), 5.0);
+    }
     public ReviewController()  {
         cc = new CustomerController();
         fc = new FlightController();
@@ -34,14 +38,10 @@ public class ReviewController {
                 int id = rs.getInt("Id");
                 long ssno = rs.getLong("CustomerSsno");
                 String name = rs.getString("CustomerName");
+                String customerEmail = rs.getString("CustomerEmail");
 
-                String date = rs.getString("date");
-                int year = Integer.parseInt(date.substring(0, 4));
-                int month = Integer.parseInt(date.substring(5,7));
-                int day = Integer.parseInt(date.substring(8, 10));
-                Date d = new Date(year, month, day);
-
-                Customer customer = cc.GetCustomerBySsno(ssno);
+                LocalDate date = LocalDate.parse(rs.getString("date"));
+                Customer customer = cc.GetCustomerByEmail(customerEmail);
 
                 double rating = rs.getDouble("rating");
                 String text = rs.getString("text");
@@ -49,7 +49,7 @@ public class ReviewController {
 
                 Flight f = fc.GetFlightByFlightNumber(flightNumber);
 
-                Review review = new Review(f, d, rating, text, customer);
+                Review review = new Review(f, date, rating, text, customer);
                 reviews.add(review);
             }
         }
@@ -65,7 +65,6 @@ public class ReviewController {
 
     public void CreateNewReview(Review review) {
         fdb.ConnectDriver();
-        long customerSsno = review.getCustomer().getSsno();
         String customerName = review.getCustomer().getName();
         double rating = review.getRating();
         String flightNumber = review.getFlight().getFlightNumber();
@@ -74,13 +73,12 @@ public class ReviewController {
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
 
-            String newReview = "INSERT INTO Reviews(customerSsno, customerName, rating, text, flightNo) VALUES(?, ?, ?, ?, ?);";
+            String newReview = "INSERT INTO Reviews(customerName, rating, text, flightNo) VALUES(?, ?, ?, ?);";
             PreparedStatement ps = connection.prepareStatement(newReview);
-            ps.setLong(1, customerSsno);
-            ps.setString(2, customerName);
-            ps.setDouble(3, rating);
-            ps.setString(4, text);
-            ps.setString(5, flightNumber);
+            ps.setString(1, customerName);
+            ps.setDouble(2, rating);
+            ps.setString(3, text);
+            ps.setString(4, flightNumber);
 
             ps.executeUpdate();
         }
@@ -92,60 +90,55 @@ public class ReviewController {
         }
     }
 
-    public Review CreateNewReview(Flight flight, Date date, double rating, String text, Customer customer) {
+    public Review CreateNewReview(Flight flight, LocalDate date, double rating, String text, Customer customer) {
         Review review = new Review(flight, date, rating, text, customer);
         allReviews.add(review);
         CreateNewReview(review);
+        UpdateRating(flight, rating);
         return review;
     }
 
-    public ArrayList<Review> GetAllReviewsByName(String customerName) {
-        fdb.ConnectDriver();
-        String query = "SELECT * FROM Reviews WHERE CustomerName='" + customerName + "'";
-        ArrayList<Review> reviews = new ArrayList<>();
+    private void UpdateRating(Flight flight, double rating) {
+        if (rating > 5.0 || rating < 0.0) {
+            System.out.println("Rating must be on the form 0 <= rating <= 5.0");
+        }
 
+        fdb.ConnectDriver();
+
+        int numberOfRatings;
+        double totalRating;
+        String flightNo = flight.getFlightNumber();
+        String queryNumberOfRatings = "SELECT NumberOfRatings FROM Flights WHERE FlightNo='" + flightNo + "'";
+        String queryTotalRating = "SELECT TotalRating FROM Flights WHERE FlightNo='" + flightNo + "'";
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
-
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-
-            while(rs.next()) {
-                int id = rs.getInt("Id");
-                long ssno = rs.getLong("CustomerSsno");
-                String name = rs.getString("CustomerName");
-
-                String date = rs.getString("date");
-                int year = Integer.parseInt(date.substring(0, 4));
-                int month = Integer.parseInt(date.substring(5,7));
-                int day = Integer.parseInt(date.substring(8, 10));
-                Date d = new Date(year, month, day);
-
-                Customer customer = cc.GetCustomerBySsno(ssno);
-
-                double rating = rs.getDouble("rating");
-                String text = rs.getString("text");
-                String flightNumber = rs.getString("FlightNo");
-
-                Flight f = fc.GetFlightByFlightNumber(flightNumber);
-
-                Review review = new Review(f, d, rating, text, customer);
-                reviews.add(review);
-            }
+            ResultSet rs = statement.executeQuery(queryNumberOfRatings);
+            rs.next();
+            numberOfRatings = rs.getInt("NumberOfRatings");
+            rs.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-        catch (SQLException e) {
-            System.err.println(e.getMessage());
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(queryTotalRating);
+            rs.next();
+            totalRating = rs.getDouble("TotalRating");
+            rs.next();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-        finally {
-            fdb.CloseConnection(connection);
-        }
-
-        if (reviews.size() == 0) return null;
-        return reviews;
+        totalRating += rating;
+        numberOfRatings++;
+        double newRating = totalRating / (double) numberOfRatings;
+        String query = "UPDATE Flights SET TotalRating=" + totalRating + ", NumberOfRatings=" + numberOfRatings + ", AverageRating=" + newRating + " WHERE FlightNo='" + flightNo + "'";
+        fdb.UpdateDatabase(query);
     }
+
     public void DeleteReview(Review review) {
         fdb.ConnectDriver();
-        String query = "DELETE FROM Reviews WHERE FlightNo='" + review.getFlight().getFlightNumber() + "' AND CustomerSsno=" + review.getCustomer().getSsno();
+        String query = "DELETE FROM Reviews WHERE FlightNo='" + review.getFlight().getFlightNumber() + "' AND CustomerEmail=" + review.getCustomer().getEmail();
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
             Statement statement = connection.createStatement();
@@ -158,12 +151,10 @@ public class ReviewController {
         allReviews = GetAllReviews();
     }
 
-
-    // TODO
-    public ArrayList<Review> GetAllReviewsBySsno(long ssno) {
+    public ArrayList<Review> GetAllReviewsByEmail(String customerEmail) {
         fdb.ConnectDriver();
         ArrayList<Review> reviews = new ArrayList<>();
-        String query = "SELECT * FROM reviews WHERE CustomerSsno=" + ssno + "";
+        String query = "SELECT * FROM reviews WHERE CustomerEmail='" + customerEmail + "'";
 
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
@@ -172,16 +163,12 @@ public class ReviewController {
 
             while(rs.next()) {
                 String flightNumber = rs.getString("FlightNo");
-                String date = rs.getString("date");
-                int year = Integer.parseInt(date.substring(0, 4));
-                int month = Integer.parseInt(date.substring(5,7));
-                int day = Integer.parseInt(date.substring(8, 10));
-                Date d = new Date(year, month, day);
+                LocalDate date = LocalDate.parse(rs.getString("date"));
                 double rating = rs.getDouble("rating");
                 String text = rs.getString("text");
                 Flight f = fc.GetFlightByFlightNumber(flightNumber);
 
-                Review review = new Review(f, d, rating, text, cc.GetCustomerBySsno(ssno));
+                Review review = new Review(f, date, rating, text, cc.GetCustomerByEmail(customerEmail));
                 reviews.add(review);
             }
         }
@@ -194,42 +181,8 @@ public class ReviewController {
         return reviews;
     }
 
-    /*
-    // Constructs a new Review and adds it to the reviews array and returns the review;
-    public Review create(Flight flight, Date date, double rating, String text) throws ClassNotFoundException {
-        Review review = new Review(flight, date, rating, text);
-        Review[] newRevs = new Review[reviews.length + 1];
-        int n = newRevs.length;
-        for(int i = 0; i < n; i++){
-            if(i == n - 1){
-                newRevs[i] = review;
-            }
-            newRevs[i] = reviews[i];
-        }
-        reviews = newRevs;
-        // það þarf síðan að finna leið til að bæta við review-inu í gagnasafnið(update)!!!
-        return review;
-    }
-
-
-    // Deletes an already exsisting review
-    public void delete(Review rev) {
-        int n = reviews.length;
-        Review[] newRevs = new Review[reviews.length - 1];
-        int j = 0;
-        for(int i = 0; i < n; i++){
-            if(rev != reviews[i]){
-                newRevs[j] = reviews[i];
-                j++;
-            }
-        }
-        // það þarf síðan að finna leið til að eyða review-inu úr gagnasafninu(update)!!!
-        rev = null;
-    }
-     */
-
     // Edits a review
-    public void edit(Review rev, Flight flight, Date date, Double rating, String text) {
+    public void edit(Review rev, Flight flight, LocalDate date, Double rating, String text) {
         rev.setFlight(flight);
         rev.setDate(date);
         rev.setRating(rating);

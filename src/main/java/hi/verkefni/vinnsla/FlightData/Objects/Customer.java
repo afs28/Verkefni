@@ -1,19 +1,15 @@
 package hi.verkefni.vinnsla.FlightData.Objects;
 
-import hi.verkefni.vinnsla.FlightData.Objects.*;
-
 public class Customer{
     private final String name;
-    private final long ssno;
     private int phone;
     private String email;
     private String address;
     private int postalCode;
     private String nation;
 
-    public Customer(String name, long ssno, int phone, String email, String address, int postalCode, String nation) {
+    public Customer(String name, int phone, String email, String address, int postalCode, String nation) {
         this.name = name;
-        this.ssno = ssno;
         this.phone = phone;
         this.email = email;
         this.address = address;
@@ -23,10 +19,6 @@ public class Customer{
 
     public String getName(){
         return this.name;
-    }
-
-    public long getSsno(){
-        return this.ssno;
     }
 
     public int getPhone(){
@@ -74,7 +66,6 @@ public class Customer{
     public String toString() {
         return "Customer{" +
                 "name='" + name + '\'' +
-                ", ssno=" + ssno +
                 ", phone=" + phone +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +

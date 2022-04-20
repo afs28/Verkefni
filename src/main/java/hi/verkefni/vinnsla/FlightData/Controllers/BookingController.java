@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import hi.verkefni.vinnsla.FlightData.Database.FlightDB;
 import hi.verkefni.vinnsla.FlightData.Objects.*;
 
-
 public class BookingController {
-    private static Connection connection = null;
-    CustomerController cc;
-    FlightController fc = new FlightController();
+    private Connection connection = null;
+    static CustomerController cc;
+    static FlightController fc = new FlightController();
     private ArrayList<Booking> allBookings;
     private FlightDB fdb;
 
@@ -18,7 +17,60 @@ public class BookingController {
         fdb = new FlightDB();
         allBookings = GetAllBookings();
     }
+    public String BookSeat(Seat seat, String flightNumber) {
+        fdb.ConnectDriver();
+        try {
+            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
 
+            int row = seat.getRow();
+            int seatChar = seat.seatCharToInt();
+            String query = "SELECT isBooked FROM Seats WHERE SeatNr = " + row + "" + seatChar + " AND FlightNumber = " + flightNumber;
+            System.out.println(query);
+            Statement statement = connection.createStatement();
+            ResultSet rs = statement.executeQuery(query);
+
+            try {
+                rs.next();
+                if (!rs.getBoolean(1)) {
+                    String bookSeatQuery = "UPDATE TABLE Seats SET isBooked = True WHERE SeatNr = '" + row + "" + seatChar + "' AND FlightNumber = '" + flightNumber + "'";
+                    System.out.println(bookSeatQuery);
+                    Statement s = connection.createStatement();
+                    s.executeUpdate(bookSeatQuery);
+                    return "Seat Booked!";
+                }
+                else return "Cannot book seat, it is already taken!";
+            }
+            finally {
+                rs.close();
+            }
+        }
+        catch (SQLException e) {
+            System.err.println(e.getMessage());
+            return "Could not book seat";
+        }
+        finally {
+            fdb.CloseConnection(connection);
+        }
+    }
+    public void CancelSeat(Seat seat) {
+        fdb.ConnectDriver();
+        try {
+            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+
+            int row = seat.getRow();
+            int seatChar = seat.seatCharToInt();
+
+            String query = "UPDATE Seats SET isBooked=false WHERE SeatNr = ? AND FlightNo = ?";
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(query);
+        }
+        catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        finally {
+            fdb.CloseConnection(connection);
+        }
+    }
     public ArrayList<Booking> GetAllBookings() {
         fdb.ConnectDriver();
         String query = "SELECT * FROM Bookings";
@@ -31,16 +83,15 @@ public class BookingController {
             ResultSet rs = statement.executeQuery(query);
 
             while(rs.next()) {
-
-                int bookingId = rs.getInt("BookingId");
-                long customerSsno = rs.getLong("CustomerSsno");
+                String customerEmail = rs.getString("CustomerEmail");
                 boolean pillowOrdered = rs.getBoolean("PillowOrdered");
+                int numberOfPassengers = rs.getInt("NumberOfPassengers");
                 String flightNo = rs.getString("FlightNo");
                 Flight flight = fc.GetFlightByFlightNumber(flightNo);
-                Customer customer = cc.GetCustomerBySsno(customerSsno);
+                Customer customer = cc.GetCustomerByEmail(customerEmail);
                 Seat s = new Seat(1, 'a');
 
-                Booking booking = new Booking(s, flight, customer, pillowOrdered, bookingId, null);
+                Booking booking = new Booking(s, flight, customer, pillowOrdered, null, numberOfPassengers);
                 bookings.add(booking);
             }
             rs.close();
@@ -54,34 +105,56 @@ public class BookingController {
 
         return bookings;
     }
+    public Booking GetBookingByCustomerAndFlightNumber(Customer customer, String flightNumber) {
+        fdb.ConnectDriver();
+        String query = "SELECT * FROM Bookings WHERE CustomerEmail='" + customer.getEmail() + "' AND FlightNo='" + flightNumber + "'";
+        ResultSet rs;
+        Booking booking = null;
+        try {
+            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            Statement statement = connection.createStatement();
+            rs = statement.executeQuery(query);
+            rs.next();
+            String customerEmail = rs.getString("CustomerEmail");
+            boolean pillowOrdered = rs.getBoolean("PillowOrdered");
+            int numberOfPassengers = rs.getInt("NumberOfPassengers");
+            String flightNo = rs.getString("FlightNo");
+            Flight flight = fc.GetFlightByFlightNumber(flightNo);
+            Seat s = new Seat(1, 'a');
 
+            booking = new Booking(s, flight, customer, pillowOrdered, null, numberOfPassengers);
+
+            rs.close();
+        }
+        catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        finally {
+            fdb.CloseConnection(connection);
+        }
+
+        return booking;
+    }
     private void CreateNewBooking(Booking booking) {
         fdb.ConnectDriver();
-        System.out.println("Hér");
-
-        int bookingId = booking.getId();
         int seatNum = booking.getSeat().getSeatChar();
         int seatRow = booking.getSeat().getRow();
         String seat = String.format("%d%s", seatNum, seatRow);
         boolean pillowOrdered = booking.getPillow();
         String customerEmail = booking.getCustomer().getEmail();
-        long customerSsno = booking.getCustomer().getSsno();
         String flightNo = booking.getFlight().getFlightNumber();
 
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
-            String newBooking = "INSERT INTO Bookings(bookingId, seat, pillowOrdered, customerEmail, CustomerSsno, FlightNo, CustomerName) VALUES(?, ?, ?, ?, ?, ?, ?);";
+            String newBooking = "INSERT INTO Bookings(seat, pillowOrdered, customerEmail, FlightNo) VALUES(?, ?, ?, ?);";
             PreparedStatement ps = connection.prepareStatement(newBooking);
-            ps.setInt(1, bookingId);
-            ps.setString(2, seat);
-            ps.setBoolean(3, pillowOrdered);
-            ps.setString(4, customerEmail);
-            ps.setLong(5, customerSsno);
-            ps.setString(6, flightNo);
-            ps.setString(7, booking.getCustomer().getName());
+            ps.setString(1, seat);
+            ps.setBoolean(2, pillowOrdered);
+            ps.setString(3, customerEmail);
+            ps.setString(4, flightNo);
 
             ps.executeUpdate();
-            DecrementSeats(fc.GetFlightByFlightNumber(flightNo));
+            DecrementSeats(fc.GetFlightByFlightNumber(flightNo), booking.getNumberOfPassengers());
             System.out.println("Successfully booked!");
         }
         catch (SQLException e) {
@@ -91,11 +164,10 @@ public class BookingController {
             fdb.CloseConnection(connection);
         }
     }
-
-    public void CreateNewBooking(Seat seat, Flight flight, Customer customer, boolean pillow, int id, Review review) {
-        if (flight.getSeatsLeft() > 0) {
-            System.out.println(flight.getSeatsLeft());
-            Booking booking = new Booking(seat, flight, customer, pillow, id, review);
+    public void CreateNewBooking(Seat seat, Flight flight, Customer customer, boolean pillow, Review review, int numberOfPassengers) {
+        if (flight.getSeatsLeft() > numberOfPassengers) {
+            Booking booking = new Booking(seat, flight, customer, pillow, review, numberOfPassengers);
+            flight.bookSeat(seat);
             CreateNewBooking(booking);
             System.out.println("Creating booking");
         } else System.out.println("Flight is full, cannot book this flight");
@@ -103,11 +175,12 @@ public class BookingController {
 
     private void DeleteBookingByCustomerAndFlightNr(Customer customer, String flightNr) {
         fdb.ConnectDriver();
-        String query = "DELETE FROM Bookings WHERE FlightNo='" + flightNr + "' AND CustomerSsno=" + customer.getSsno();
+        String query = "DELETE FROM Bookings WHERE FlightNo='" + flightNr + "' AND CustomerEmail=" + customer.getEmail();
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
             Statement statement = connection.createStatement();
             statement.executeUpdate(query);
+            DeleteBooking(GetBookingByCustomerAndFlightNumber(customer, flightNr));
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         } finally {
@@ -115,10 +188,9 @@ public class BookingController {
         }
         allBookings = GetAllBookings();
     }
-
     public void DeleteBooking(Booking booking) {
         fdb.ConnectDriver();
-        String query = "DELETE FROM Bookings WHERE CustomerSsno='" + booking.getCustomer().getSsno() + "' AND FlightNo='" + booking.getFlight() + "'";
+        String query = "DELETE FROM Bookings WHERE CustomerEmail='" + booking.getCustomer().getEmail() + "' AND FlightNo='" + booking.getFlight() + "'";
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
             Statement statement = connection.createStatement();
@@ -128,32 +200,22 @@ public class BookingController {
         } finally {
             fdb.CloseConnection(connection);
         }
-        IncrementSeats(booking.getFlight());
+        booking.getFlight().freeSeat(booking.getSeat());
+        IncrementSeats(booking.getFlight(), booking.getNumberOfPassengers());
         allBookings = GetAllBookings();
     }
-
-    // Hjálparfall
-    private void DecrementSeats(Flight flight) {
-        int seatsLeft = flight.getSeatsLeft() - 1;
+    private void DecrementSeats(Flight flight, int numberOfPassengers) {
+        int seatsLeft = flight.getSeatsLeft() - numberOfPassengers;
         flight.setSeatsLeft(seatsLeft);
         String query = "UPDATE Flights SET SeatsLeft=" + seatsLeft + " WHERE FlightNo ='" + flight.getFlightNumber() + "'";
         fdb.UpdateDatabase(query);
     }
-
-    // Hjálparfall
-    private void IncrementSeats(Flight flight) {
-        int seatsLeft = flight.getSeatsLeft() + 1;
+    private void IncrementSeats(Flight flight, int numberOfPassengers) {
+        int seatsLeft = flight.getSeatsLeft() + numberOfPassengers;
         flight.setSeatsLeft(seatsLeft);
         String query = "UPDATE Flights SET SeatsLeft=" + seatsLeft + " WHERE FlightNo ='" + flight.getFlightNumber() + "'";
         fdb.UpdateDatabase(query);
     }
-
-    public static void main(String[] args) {
-
-    }
-
-
-
 }
 
 
