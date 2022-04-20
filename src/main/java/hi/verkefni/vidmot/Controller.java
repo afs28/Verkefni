@@ -6,7 +6,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -14,14 +13,6 @@ public class Controller implements Initializable {
     //FXML breytur úr SceneBuilder
     @FXML
     public ChoiceBox fxOneWayRoundTrip;
-    @FXML
-    public ChoiceBox fxHotelsNoRooms;
-    @FXML
-    public ChoiceBox fxHotelsNoAdults;
-    @FXML
-    public ChoiceBox<String> fxHotelsNoChildren;
-    @FXML
-    public ComboBox fxDayTripsDuration;
     @FXML
     public TabPane fxTabPane;
     @FXML
@@ -79,6 +70,8 @@ public class Controller implements Initializable {
     @FXML
     public ChoiceBox fxFlightsTo;
     @FXML
+    public TableView fxHotelTable;
+    @FXML
     private ChoiceBox<String> fxFlightsNoPassengers;
 
     @Override
@@ -97,6 +90,8 @@ public class Controller implements Initializable {
         fxDayTripsNextButton.setOnAction(fxDayTripsNextButtonEvent);
         fxOrderBackButton.setOnAction(fxOrderSummaryBackButtonEvent);
         fxAcountNextButton.setOnAction(fxMyOrderNextButtonEvent);
+
+
     }
 
 
@@ -210,6 +205,7 @@ public class Controller implements Initializable {
             fxTabPane.getSelectionModel().select(fxDayTripsTab);
         }
     };
+
 
 
 

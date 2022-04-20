@@ -675,7 +675,7 @@
                         </StackPane>
                         <StackPane layoutX="14.0" layoutY="246.0" prefHeight="428.0" prefWidth="1044.0">
                            <children>
-                              <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f0ffff;">
+                              <TableView fx:id="fxHotelTable" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f0ffff;">
                                 <columns>
                                   <TableColumn prefWidth="206.00003051757812" text="RoomID" />
                                   <TableColumn minWidth="0.0" prefWidth="222.6666259765625" text="Capacity" />
