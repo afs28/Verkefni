@@ -1,5 +1,6 @@
 package hi.verkefni.vidmot;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -74,12 +75,18 @@ public class Controller implements Initializable {
     @FXML
     public Button fxAcountNextButton;
     @FXML
+    public ChoiceBox fxFlightsFrom;
+    @FXML
+    public ChoiceBox fxFlightsTo;
+    @FXML
     private ChoiceBox<String> fxFlightsNoPassengers;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //choice og comboboxes
-        setFXFlightsChoiceBox();
+        setFXFlightsBox();
+        setFXHotelsBox();
+        setFXDayTripsBox();
 
         //back og next takkar
         fxFlightsBackButton.setOnAction(fxFlightsBackButtonEvent);
@@ -93,16 +100,52 @@ public class Controller implements Initializable {
     }
 
 
-    public void setFXFlightsChoiceBox() {
+    public void setFXFlightsBox() {
         //Setti inn virkni fyrir choicebox í Flights tab, kannski er betri leið fyrir það samt.
-        fxFlightsNoPassengers.getItems().removeAll(fxFlightsNoPassengers.getItems());
-        fxFlightsNoPassengers.getItems().addAll("","1 passenger", "2 passengers", "3 passengers", "4 passengers", "5 passengers", "6 passengers", "7 passengers", "8 passengers", "9 passengers");
+        fxFlightsNoPassengers.setItems(FXCollections.observableArrayList("","1 passenger", "2 passengers", "3 passengers",
+                "4 passengers", "5 passengers", "6 passengers", "7 passengers", "8 passengers", "9 passengers"));
         fxFlightsNoPassengers.getSelectionModel().select("");
 
-        fxOneWayRoundTrip.getItems().removeAll(fxOneWayRoundTrip.getItems());
-        fxOneWayRoundTrip.getItems().addAll( "", "Round trip", "One way trip");
+        fxOneWayRoundTrip.setItems(FXCollections.observableArrayList( "", "Round trip", "One way trip"));
         fxOneWayRoundTrip.getSelectionModel().select("");
+
+        //From
+        fxFlightsFrom.setItems(FXCollections.observableArrayList("", "Reykjavík", "Egilsstaðir", "Akureyri", "Keflavík", "Húsavík"));
+        fxFlightsFrom.getSelectionModel().select("");
+
+        //To
+        fxFlightsTo.setItems(FXCollections.observableArrayList("", "Reykjavík", "Egilsstaðir", "Akureyri", "Keflavík", "Húsavík"));
+        fxFlightsTo.getSelectionModel().select("");
     }
+
+    public void setFXHotelsBox() {
+        fxCapacity.setItems(FXCollections.observableArrayList("","1", "2","3","4","5","6"));
+        fxCapacity.getSelectionModel().select("");
+
+        fxTypeOfRoom.setItems(FXCollections.observableArrayList("","Luxury", "Economy"));
+        fxTypeOfRoom.getSelectionModel().select("");
+
+        fxLengthOfStay.setItems(FXCollections.observableArrayList("", "1 night", "2 nights", "3 nights", "4 nights", "5 nights", "6 nights", "7 nights", "8 nights",
+                "9 nights", "10 nights", "11 nights", "12 nights", "13 nights", "14 nights", "15 nights", "16 nights", "17 nights", "18 nights",
+                "19 nights", "20 nights", "21 nights", "22 nights", "23 nights", "24 nights", "25 nights", "26 nights"));
+        fxLengthOfStay.getSelectionModel().select("");
+        fxLengthOfStay.setVisibleRowCount(5);
+
+        fxHotelLocation.setItems(FXCollections.observableArrayList("", "S", "N", "V", "A"));
+        fxHotelLocation.getSelectionModel().select("");
+    }
+
+    public void setFXDayTripsBox() {
+        fxActivity.setItems(FXCollections.observableArrayList("", "Fjallganga", "Sigling", "Skíði", "Köfun"));
+        fxActivity.getSelectionModel().select("");
+
+        fxLocation.setItems(FXCollections.observableArrayList("", "S", "N", "V", "A"));
+        fxLocation.getSelectionModel().select("");
+
+        fxLanguage.setItems(FXCollections.observableArrayList("", "Íslenska", "Enska"));
+        fxLanguage.getSelectionModel().select("");
+    }
+
 
     //Event handler fyrir fxFlightsBackButton
     EventHandler<ActionEvent> fxMyOrderNextButtonEvent = new EventHandler<ActionEvent>() {
