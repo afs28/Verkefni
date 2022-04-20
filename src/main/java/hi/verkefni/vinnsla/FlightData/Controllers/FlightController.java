@@ -3,6 +3,7 @@ package hi.verkefni.vinnsla.FlightData.Controllers;
 import hi.verkefni.vinnsla.FlightData.Database.FlightDB;
 import hi.verkefni.vinnsla.FlightData.Objects.Flight;
 
+import java.io.File;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,6 +11,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class FlightController {
+
+    private static final String DB_PATH = "Verkefni/src/main/java/hi/verkefni/vinnsla/FlightData/Database" + File.separator + "flightDB.db";
     FlightDB fdb = new FlightDB();
     Connection connection = null;
     private ArrayList<Flight> allFlights;
@@ -20,7 +23,7 @@ public class FlightController {
         Set<String> departures = new HashSet<>();
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -45,7 +48,7 @@ public class FlightController {
         Set<String> arrivals = new HashSet<>();
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -77,7 +80,7 @@ public class FlightController {
     {
         fdb.ConnectDriver();
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             String newFlight = "INSERT INTO Flights(flightNumber, arrival, departure, date, cost, seatsLeft, aircraft) VALUES (?, ?, ?, ?, ?, ?, ?);";
             PreparedStatement ps = connection.prepareStatement(newFlight);
@@ -104,7 +107,7 @@ public class FlightController {
         Flight flight;
         String query = "SELECT * FROM Flights WHERE FlightNo='" + flightNumber + "'";
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
 
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
@@ -138,8 +141,7 @@ public class FlightController {
         ArrayList<Flight> flights = new ArrayList<>();
 
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:flightDB.db");
-            System.out.println(query);
+            connection = DriverManager.getConnection("jdbc:sqlite:" + DB_PATH);
             Statement statement = connection.createStatement();
             ResultSet rs = statement.executeQuery(query);
 
