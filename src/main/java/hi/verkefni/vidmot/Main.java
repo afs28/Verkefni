@@ -1,6 +1,5 @@
 package hi.verkefni.vidmot;
 
-import hi.verkefni.vinnsla.DayTripData.Controllers.DayTripController;
 import hi.verkefni.vinnsla.DayTripData.Database.BookingDataConnection;
 import hi.verkefni.vinnsla.DayTripData.Database.CustomerDataConnection;
 import hi.verkefni.vinnsla.DayTripData.Objects.Booking;
