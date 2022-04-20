@@ -1,12 +1,20 @@
 package hi.verkefni.vidmot;
 
+import hi.verkefni.vinnsla.FlightData.Controllers.FlightController;
+import hi.verkefni.vinnsla.FlightData.Controllers.SearchController;
+import hi.verkefni.vinnsla.FlightData.Objects.Flight;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+
 import java.net.URL;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -74,6 +82,29 @@ public class Controller implements Initializable {
     @FXML
     private ChoiceBox<String> fxFlightsNoPassengers;
 
+    @FXML
+    private TableView<Flight> fxTableViewFlights;
+    @FXML
+    private TableColumn<Flight, String> fxFlightNumberCol;
+    @FXML
+    private TableColumn<Flight, String> fxArrivalCol;
+    @FXML
+    private TableColumn<Flight, String> fxDepartureCol;
+    @FXML
+    private TableColumn<Flight, LocalDate> fxFlightDateCol;
+    @FXML
+    private TableColumn<Flight, Double> fxFlightCostCol;
+    @FXML
+    private TableColumn<Flight, Integer> fxFlightSeatsLeftCol;
+    @FXML
+    private TableColumn<Flight, String> fxFlightAircraftCol;
+
+
+    FlightController fc = new FlightController();
+    SearchController sc = new SearchController();
+    ArrayList<String> departures;
+    ArrayList<String> destinations;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //choice og comboboxes
@@ -102,13 +133,27 @@ public class Controller implements Initializable {
         fxOneWayRoundTrip.setItems(FXCollections.observableArrayList( "", "Round trip", "One way trip"));
         fxOneWayRoundTrip.getSelectionModel().select("");
 
-        //From
-        fxFlightsFrom.setItems(FXCollections.observableArrayList("", "Reykjavík", "Egilsstaðir", "Akureyri", "Keflavík", "Húsavík"));
-        fxFlightsFrom.getSelectionModel().select("");
+        ObservableList<Flight> flights = FXCollections.observableArrayList(fc.GetAllFlights());
+        fxFlightNumberCol.setCellValueFactory(new PropertyValueFactory<>("flightNumber"));
+        fxArrivalCol.setCellValueFactory(new PropertyValueFactory<>("arrival"));
+        fxDepartureCol.setCellValueFactory(new PropertyValueFactory<>("departure"));
+        fxFlightDateCol.setCellValueFactory(new PropertyValueFactory<>("dateTime"));
+        fxFlightCostCol.setCellValueFactory(new PropertyValueFactory<>("cost"));
+        fxFlightSeatsLeftCol.setCellValueFactory(new PropertyValueFactory<>("seatsLeft"));
+        fxFlightAircraftCol.setCellValueFactory(new PropertyValueFactory<>("aircraft"));
+        fxTableViewFlights.getItems().clear();
+        fxTableViewFlights.setItems(flights);
+        fxTableViewFlights.getColumns().setAll(fxFlightNumberCol, fxArrivalCol, fxDepartureCol, fxFlightDateCol, fxFlightCostCol, fxFlightSeatsLeftCol, fxFlightAircraftCol);
 
-        //To
-        fxFlightsTo.setItems(FXCollections.observableArrayList("", "Reykjavík", "Egilsstaðir", "Akureyri", "Keflavík", "Húsavík"));
-        fxFlightsTo.getSelectionModel().select("");
+        // Populate "From" ComboBox
+        departures = new ArrayList<>();
+        departures.addAll(fc.GetAllDepartures());
+        fxFlightsTo.setItems(FXCollections.observableArrayList(departures));
+
+        // Populate "To" ComboBox
+        destinations = new ArrayList<>();
+        destinations.addAll(fc.GetAllDestinations());
+        fxFlightsTo.setItems(FXCollections.observableArrayList(destinations));
     }
 
     public void setFXHotelsBox() {
