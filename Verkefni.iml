@@ -30,5 +30,14 @@
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:win:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:11.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:11.0.2" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../sqlite-jdbc-3.18.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

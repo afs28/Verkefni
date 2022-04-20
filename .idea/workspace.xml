@@ -6,16 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a1b5ba3f-3135-4e23-a0c4-829ed0280f1c" name="Changes" comment="Smá lagfæringar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Verkefni.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Verkefni.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vidmot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/ReviewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Controllers/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Database/FlightDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Database/FlightDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/BookingDataConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/BookingDataConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/CustomerDataConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/CustomerDataConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/DayTripDataConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/DayTripDataConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/ReviewDataConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/ReviewDataConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/Setup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/DayTripData/Database/Setup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hi/verkefni/vidmot/Main.class" afterDir="false" />
@@ -73,8 +70,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/hi/verkefni/vinnsla/FlightData/Database" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sqlite-jdbc-3.18.0.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -276,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650453648502</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Smá lagfæringar">
+      <created>1650457846647</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1650457846647</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

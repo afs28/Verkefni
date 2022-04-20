@@ -9,8 +9,8 @@ import java.io.File;
 import java.sql.*;
 
 public class ReviewDataConnection {
-    private static final String SQL_PATH = "DayTourSearch-3D/src/Data" + File.separator + "schema.sql";
-    private static final String DB_PATH = "DayTourSearch-3D/src/Data" + File.separator + "dataBases.db";
+    private static final String SQL_PATH = "src/main/java/hi/verkefni/vinnsla/DayTripData/Database" + File.separator + "schema.sql";
+    private static final String DB_PATH = "src/main/java/hi/verkefni/vinnsla/DayTripData/Database" + File.separator + "dataBases.db";
     private Connection connection;
     private Statement statement;
 

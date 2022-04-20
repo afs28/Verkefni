@@ -44,10 +44,10 @@ public class Main extends Application {
 
         BookingDataConnection bookingDataConn = new BookingDataConnection();
         ObservableList<Booking> bookings = bookingDataConn.getBookings(customer.getCustomerId());
-        for(Booking booking : bookings) customer.addBooking(booking);
+        // for(Booking booking : bookings) customer.addBooking(booking);
 
-        DayTripController dayTripController = loader.getController();
-        dayTripController.initData(customer);
+        // DayTripController dayTripController = loader.getController();
+        // dayTripController.initData(customer);
     }
 
     public static void main(String[] args) {

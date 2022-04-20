@@ -345,7 +345,7 @@
                                           <Insets left="600.0" right="20.0" top="50.0" />
                                        </StackPane.margin>
                                     </Label>
-                                    <ChoiceBox prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                                    <ChoiceBox fx:id="fxFlightsFrom" prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
                                           <Insets left="400.0" right="20.0" top="50.0" />
                                        </StackPane.margin>
@@ -357,7 +357,7 @@
                                           </InnerShadow>
                                        </effect>
                                     </ChoiceBox>
-                                    <ChoiceBox prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
+                                    <ChoiceBox fx:id="fxFlightsTo" prefWidth="150.0" style="-fx-background-color: #f0ffff;" StackPane.alignment="TOP_LEFT">
                                        <StackPane.margin>
                                           <Insets left="640.0" right="20.0" top="50.0" />
                                        </StackPane.margin>
